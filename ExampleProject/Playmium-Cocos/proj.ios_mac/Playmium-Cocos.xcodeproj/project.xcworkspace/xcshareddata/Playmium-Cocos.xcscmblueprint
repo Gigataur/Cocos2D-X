@@ -1,0 +1,35 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "697ff647-2f4a-6948-9d6c-f7add5765150++505",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+    "7cfeee16-388e-c14b-aadf-0e4e9e38b502++2087" : {
+
+    },
+    "697ff647-2f4a-6948-9d6c-f7add5765150++505" : {
+
+    }
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "7cfeee16-388e-c14b-aadf-0e4e9e38b502++2087" : 0,
+    "697ff647-2f4a-6948-9d6c-f7add5765150++505" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "F0F0B35E-A781-40D6-B4EE-FCDB5BBD2023",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "7cfeee16-388e-c14b-aadf-0e4e9e38b502++2087" : "..",
+    "697ff647-2f4a-6948-9d6c-f7add5765150++505" : "trunk\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "Playmium-Cocos",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "RepubSDKCocos2DX\/Playmium-Cocos\/proj.ios_mac\/Playmium-Cocos.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/glitchsvr01\/svn\/RepubSDKCocos2DX",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Subversion",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "697ff647-2f4a-6948-9d6c-f7add5765150++505"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/10.126.11.12\/svn\/Libraries",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Subversion",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "7cfeee16-388e-c14b-aadf-0e4e9e38b502++2087"
+    }
+  ]
+}

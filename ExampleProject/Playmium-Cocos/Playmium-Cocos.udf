@@ -1,0 +1,32 @@
+<UserData Version="2.3.2.3">
+  <Properties>
+    <Item Key="CocosRecentOperation">
+      <Value ctype="CocosRecentOperation">
+        <LastPublishType Value="XCode" />
+        <IsLastPublish Value="True" />
+        <LastRunType Value="Mac" />
+      </Value>
+    </Item>
+    <Item Key="PackageParamsKey">
+      <Value ctype="PackageParams">
+        <LuaIsEncrypt Value="False" />
+        <LuaEncryptKey Value="" />
+        <LuaEncryptSign Value="" />
+        <Android_PackageName Value="org.cocos.PlaymiumCocos" />
+        <AndroidkeyStore Value="" />
+        <AndroidVersion Value="android-10" />
+        <iOS_Target Value="PlaymiumiOS-Cocos" />
+        <iOS_BundleID Value="iPhone Distribution: GlitchSoft Corporation (JTE5ECYQD5)" />
+        <Platform Value="None" />
+        <RunPlatform Value="Mac" />
+        <FrameworkVersion Value="cocos2d-x-3.8" />
+        <IsDebugKeystore Value="True" />
+        <KeystorePassword Value="" />
+        <KeystoreAliasName Value="" />
+        <KeystoreAliasPassword Value="" />
+        <EnableSourceMap Value="False" />
+        <EnableHTML5Advanced Value="False" />
+      </Value>
+    </Item>
+  </Properties>
+</UserData>

@@ -1,0 +1,13 @@
+You need to copy the static libs for your platforms 
+
+This can be found in your Cocos installation directory i.e.:
+
+MAC
+/Applications/Cocos/frameworks/cocos2d-x-3.8/prebuilt/ios/
+
+the static libraries you need are:
+libjscocos2d iOS.a 
+libcocos2d iOS.a
+
+
+copy them to <project path>/ExampleProject/Playmium-Cocos/libs/ios 
