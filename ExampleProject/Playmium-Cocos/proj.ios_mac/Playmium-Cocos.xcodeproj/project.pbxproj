@@ -67,6 +67,8 @@
 		6DD80DF11BA9DEAE00B3358D /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DD80DF01BA9DEAE00B3358D /* OpenGLES.framework */; };
 		6DD80DFB1BA9DFB600B3358D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DD80DFA1BA9DFB600B3358D /* UIKit.framework */; };
 		6DD80DFD1BA9DFE000B3358D /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DD80DFC1BA9DFE000B3358D /* CoreMotion.framework */; };
+		6DE5A0001BCD81230059A7A3 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6DE59FFF1BCD81230059A7A3 /* Images.xcassets */; settings = {ASSET_TAGS = (); }; };
+		6DE5A0041BCD84820059A7A3 /* Images-2.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6DE5A0031BCD84820059A7A3 /* Images-2.xcassets */; settings = {ASSET_TAGS = (); }; };
 		8262943E1AAF051F00CB7CF7 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8262943D1AAF051F00CB7CF7 /* Security.framework */; };
 		99B12AFA1BB33F080060E426 /* PlaymiumInterface.mm in Sources */ = {isa = PBXBuildFile; fileRef = 99B12AF91BB33F080060E426 /* PlaymiumInterface.mm */; };
 		BF1712471292920000B8313A /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = BF170DB412928DE900B8313A /* libz.dylib */; };
@@ -177,6 +179,8 @@
 		6DD80DFA1BA9DFB600B3358D /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.4.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
 		6DD80DFC1BA9DFE000B3358D /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.4.sdk/System/Library/Frameworks/CoreMotion.framework; sourceTree = DEVELOPER_DIR; };
 		6DE59FF31BC6DF4F0059A7A3 /* PluginPlaymium.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = PluginPlaymium.xcodeproj; path = ../libs/plugins/playmium/proj.ios/PluginPlaymium.xcodeproj; sourceTree = "<group>"; };
+		6DE59FFF1BCD81230059A7A3 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = "Playmium-Cocos-mobile/Images.xcassets"; sourceTree = SOURCE_ROOT; };
+		6DE5A0031BCD84820059A7A3 /* Images-2.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = "Images-2.xcassets"; path = "Playmium-Cocos-mobile/Images-2.xcassets"; sourceTree = SOURCE_ROOT; };
 		8262943D1AAF051F00CB7CF7 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		89AD4506B527F53C15871621 /* libcocos2d iOS.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libcocos2d iOS.a"; path = "/Applications/Cocos/frameworks/cocos2d-x-3.8/prebuilt/ios/libcocos2d iOS.a"; sourceTree = "<absolute>"; };
 		99B12AF81BB33F080060E426 /* PlaymiumInterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PlaymiumInterface.h; path = ios/PlaymiumInterface.h; sourceTree = SOURCE_ROOT; };
@@ -325,6 +329,8 @@
 		46880B7519C43A67006E1F66 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				6DE5A0031BCD84820059A7A3 /* Images-2.xcassets */,
+				6DE59FFF1BCD81230059A7A3 /* Images.xcassets */,
 				6D8C6DF01BAB4B32009618F0 /* Keystones */,
 				59034C45B7318DA5E4A7B462 /* res */,
 			);
@@ -477,6 +483,11 @@
 				TargetAttributes = {
 					1D6058900D05DD3D006BFB54 = {
 						DevelopmentTeam = JTE5ECYQD5;
+						SystemCapabilities = {
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -529,6 +540,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5087E78117EB970100C73F5D /* Icon-120.png in Resources */,
+				6DE5A0001BCD81230059A7A3 /* Images.xcassets in Resources */,
 				5087E78617EB970100C73F5D /* Icon-76.png in Resources */,
 				6D8C6DEF1BAB4AE9009618F0 /* LocalNotificationData.localNotif in Resources */,
 				5087E77F17EB970100C73F5D /* Default@2x.png in Resources */,
@@ -545,6 +557,7 @@
 				50EF629617ECD46A001EB2F8 /* Icon-40.png in Resources */,
 				5087E78217EB970100C73F5D /* Icon-144.png in Resources */,
 				50EF629817ECD46A001EB2F8 /* Icon-80.png in Resources */,
+				6DE5A0041BCD84820059A7A3 /* Images-2.xcassets in Resources */,
 				5087E78417EB970100C73F5D /* Icon-57.png in Resources */,
 				5087E77E17EB970100C73F5D /* Default.png in Resources */,
 				521A8E6419F0C34300D177D7 /* Default-667h@2x.png in Resources */,
@@ -597,8 +610,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Distribution: GlitchSoft Corporation (JTE5ECYQD5)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: GlitchSoft Corporation (JTE5ECYQD5)";
 				COMPRESS_PNG_FILES = YES;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -646,7 +660,7 @@
 					"-ObjC",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.playmium.cocos2dx;
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "a2865ec1-5891-473f-b486-6cca7c00893d";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				USER_HEADER_SEARCH_PATHS = "$(_COCOS_HEADER_IOS_BEGIN) $(_COCOS_HEADER_IOS_END) $(SRCROOT)/../libs/**";
@@ -658,8 +672,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Distribution: GlitchSoft Corporation (JTE5ECYQD5)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: GlitchSoft Corporation (JTE5ECYQD5)";
 				COMPRESS_PNG_FILES = YES;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -705,7 +720,7 @@
 					"-ObjC",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.playmium.cocos2dx;
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "a2865ec1-5891-473f-b486-6cca7c00893d";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				USER_HEADER_SEARCH_PATHS = "$(_COCOS_HEADER_IOS_BEGIN) $(_COCOS_HEADER_IOS_END) $(SRCROOT)/../libs/**";
