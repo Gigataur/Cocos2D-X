@@ -13,11 +13,11 @@
 #include <Playmium/CPlaymiumAds.h>
 #include <Playmium/CPlaymiumSDK.h>
 #include <Playmium/PlaymiumDefines.h>
+#include <sstream>
 
 #include "PluginManager.h"  // needed to load plugins
 #include "ProtocolAds.h"    // needed for kAdsReceived enums
 
-using namespace cocos2d::ui;
 using namespace cocos2d::plugin;
 
 
@@ -372,6 +372,7 @@ void PlaymiumCallbackHandler::callbackFunction(int type, std::string &message)
 #endif // CC_TARGET_OS_IPHONE
 }
 
+using namespace std;
 // helper functions for spliting the string apart for the error messages
 std::vector<std::string> &PlaymiumCallbackHandler::split(const std::string &s, char delim, std::vector<std::string> &elems)
 {
