@@ -16,6 +16,9 @@
 - (void) LoadAndShowAd:(NSNumber*) adType;
 - (void) LoadAd:(NSNumber*) adType;
 
+- (void) LoadAndShowAd:(NSNumber*) adType : (NSString*) adID;
+- (void) LoadAd:(NSNumber*) adType : (NSString*) adID;
+
 /**
  interfaces of protocol : InterfaceAds
  */

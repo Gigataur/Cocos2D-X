@@ -13,16 +13,16 @@
 #include <Playmium/CPlaymiumAds.h>
 #include <Playmium/CPlaymiumSDK.h>
 #include <Playmium/PlaymiumDefines.h>
-#include <sstream>
 
 #include "PluginManager.h"  // needed to load plugins
 #include "ProtocolAds.h"    // needed for kAdsReceived enums
 
+using namespace cocos2d::ui;
 using namespace cocos2d::plugin;
 
 
 cocos2d::plugin::ProtocolAds* PlaymiumInterface::m_Playmium=NULL;
-static PlaymiumCallbackHandler *s_handler = NULL;
+
 
 #pragma mark - Parameter Utilities
 
@@ -116,7 +116,7 @@ void PlaymiumInterface::resumeSession()
 }
 
 
-unsigned int PlaymiumInterface::startSession( bool debug, PlaymiumCallbackHandler *handler)
+unsigned int PlaymiumInterface::startSession( bool debug, ProtocolAds::ProtocolAdsCallback callback )
 {
   if (m_Playmium == NULL)
   {
@@ -134,11 +134,7 @@ unsigned int PlaymiumInterface::startSession( bool debug, PlaymiumCallbackHandle
     
   m_Playmium->setDebugMode(debug);
   m_Playmium->configDeveloperInfo(devInfo);
-  
-  cocos2d::plugin::ProtocolAds::ProtocolAdsCallback callback = handler->callbackFunction;
   m_Playmium->setCallback(callback);
-  
-  s_handler = handler;
   
   return (unsigned int)error;
 }
@@ -173,35 +169,35 @@ bool PlaymiumInterface::areAdsDone()
 }
 
 
-unsigned int PlaymiumInterface::isAdAvailable( unsigned int type )
+unsigned int PlaymiumInterface::isAdAvailable( unsigned int type, const char *adID )
 {
   Playmium::Error error = Playmium::PLAYMIUM_ERR_NONE;
-  CPlaymiumAdDef ad( (Playmium::AdType)type );
+  CPlaymiumAdDef ad( (Playmium::AdType)type, adID );
   CPlaymiumAds::isAdAvailable( ad, &error );
   return (unsigned int)error;
 }
 
 
-void PlaymiumInterface::loadAd( unsigned int type )
+void PlaymiumInterface::loadAd( unsigned int type, const char *adID )
 {
-  CPlaymiumAdDef ad( (Playmium::AdType)type );
+  CPlaymiumAdDef ad( (Playmium::AdType)type, adID );
   CPlaymiumAds::loadAd( ad );
 }
 
 
-unsigned int PlaymiumInterface::showAd( unsigned int type )
+unsigned int PlaymiumInterface::showAd( unsigned int type, const char *adID)
 {
   Playmium::Error error = Playmium::PLAYMIUM_ERR_NONE;
-  CPlaymiumAdDef ad( (Playmium::AdType)type );
+  CPlaymiumAdDef ad( (Playmium::AdType)type, adID );
   CPlaymiumAds::showAd( ad, &error );
   return (unsigned int)error;
 }
 
 
-unsigned int PlaymiumInterface::loadAndShowAd( unsigned int type )
+unsigned int PlaymiumInterface::loadAndShowAd( unsigned int type, const char *adID)
 {
   Playmium::Error error = Playmium::PLAYMIUM_ERR_NONE;
-  CPlaymiumAdDef ad( (Playmium::AdType)type );
+  CPlaymiumAdDef ad( (Playmium::AdType)type, adID );
   CPlaymiumAds::loadAndShowAd( ad, &error );
   return (unsigned int)error;
 }
@@ -290,106 +286,3 @@ void PlaymiumInterface::sendKeystoneFilePath( const char* directory )
   // pass keystone directory to plugin
   CPlaymiumSDK::sendKeystoneFilePath(directory);
 }
-
-
-
-///////////////////////////////
-// PlaymiumCallbackHandler
-///////////////////////////////
-
-void PlaymiumCallbackHandler::callbackFunction(int type, std::string &message)
-{
-#ifdef CC_TARGET_OS_IPHONE
-  std::vector<std::string> splitArray = split(message, '|');
-  
-  // no strings so exit here nothing to parse.
-  if(splitArray.size() <= 0)
-  {
-    return;
-  }
-  
-  switch(type)
-  {
-    case cocos2d::plugin::kAdsShown: // ad is shown
-    {
-      if(s_handler)
-        s_handler->onAdShown(splitArray[0].c_str());
-      break;
-    }
-      
-    case cocos2d::plugin::kAdsDismissed: // ad is hidden
-    {
-      break;
-    }
-      
-    case cocos2d::plugin::kPointsSpendSucceed: // reward points recieved
-    {
-      //split to get ad id and the reward amount
-      int rewardID = -1;
-      if(splitArray[1].length() > 0)
-      {
-        rewardID = atoi(splitArray[1].c_str());
-      }
-      
-      if(s_handler != NULL)
-        s_handler->onReward(splitArray[0].c_str(), rewardID);
-      
-      break;
-    }
-      
-    case cocos2d::plugin::kNetworkError: // failed to show ad
-    {
-      // error only has id same as shown /dismissed
-      if(s_handler != NULL)
-        s_handler->onAdFailed(splitArray[0].c_str());
-      
-      break;
-    }
-      
-    case cocos2d::plugin::kUnknownError: // update status return value.
-    {
-      // has if the zone if was available or not.
-      bool bAvailable = strcmp(splitArray[1].c_str(), "true") == 0;
-      
-      if(s_handler != NULL)
-      {
-        s_handler->onStatusUpdate(splitArray[0].c_str(), bAvailable);
-      }
-      
-      break;
-    }
-      
-      
-    default:
-    {
-      std::string messageText = "UNKOWN ERROR CODE Please check with support! playme@glitchsoft.com";
-      
-      //if(s_Handlers)
-      //  s_Handlers->setErrorText(messageText);
-      break;
-    }
-  }
-#endif // CC_TARGET_OS_IPHONE
-}
-
-using namespace std;
-// helper functions for spliting the string apart for the error messages
-std::vector<std::string> &PlaymiumCallbackHandler::split(const std::string &s, char delim, std::vector<std::string> &elems)
-{
-  std::stringstream ss(s);
-  std::string item;
-  while (std::getline(ss, item, delim))
-  {
-    elems.push_back(item);
-  }
-  return elems;
-}
-
-
-std::vector<std::string> PlaymiumCallbackHandler::split(const std::string &s, char delim)
-{
-  std::vector<std::string> elems;
-  split(s, delim, elems);
-  return elems;
-}
-

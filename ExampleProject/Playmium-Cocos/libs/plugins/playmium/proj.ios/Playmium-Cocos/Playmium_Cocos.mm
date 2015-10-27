@@ -108,6 +108,27 @@ DefaultPlaymiumAdsListener* adListener = NULL;
 }
 
 
+- (void) LoadAndShowAd:(NSNumber*) adType : (NSString*) adID
+{
+  int numberVal = [adType intValue];
+  NSLog(@"Playmium: LoadAndShowAd (%d)", numberVal);
+  Playmium::AdType type = (Playmium::AdType)numberVal;
+  
+  CPlaymiumAdDef ad( type, [adID UTF8String]);
+  CPlaymiumAds::loadAndShowAd( ad, NULL );
+}
+
+- (void) LoadAd:(NSNumber*) adType : (NSString*) adID
+{
+  int numberVal = [adType intValue];
+  NSLog(@"Playmium: LoadAd (%d)", numberVal);
+  Playmium::AdType type = (Playmium::AdType)numberVal;
+  
+  CPlaymiumAdDef ad( type, [adID UTF8String]);
+  CPlaymiumAds::loadAd( ad );
+}
+
+
 /*
  We have chosen not to implement through the protocol interface
  To call our consitent calls to our Interface.

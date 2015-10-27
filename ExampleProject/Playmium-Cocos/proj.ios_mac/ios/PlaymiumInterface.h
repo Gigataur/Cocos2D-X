@@ -11,23 +11,6 @@
 
 #include "ProtocolAds.h"
 
-class PlaymiumCallbackHandler
-{
-public:
-  PlaymiumCallbackHandler() {};
-  
-  // The callback function that Caller will call.
-  static void callbackFunction(int i, std::string &message);
-  
-  static std::vector<std::string> &split(const std::string &s, char delim, std::vector<std::string> &elems);
-  static std::vector<std::string> split(const std::string &s, char delim);
-  
-  virtual void onReward(const char *AdID, const int rewardID) = 0;
-  virtual void onAdShown(const char *AdID) = 0;
-  virtual void onAdFailed(const char *AdID) = 0;
-  virtual void onStatusUpdate(const char *AdID, const bool bAvailable) = 0;
-};
-
 class PlaymiumInterface
 {
 private:
@@ -43,7 +26,7 @@ public:
   static const char* getStringForErrorCode( unsigned int errorCode );
   static void pauseSession();
   static void resumeSession();
-  static unsigned int startSession( bool debug, PlaymiumCallbackHandler *handler);
+  static unsigned int startSession( bool debug, cocos2d::plugin::ProtocolAds::ProtocolAdsCallback callback );
   static void stopSession();
   static bool showEULA();
   static bool showPrivacyPolicy();
@@ -54,10 +37,10 @@ public:
   ///////////////////////////////
 
   static bool areAdsDone();
-  static unsigned int isAdAvailable( unsigned int type );
-  static void loadAd( unsigned int type );
-  static unsigned int showAd( unsigned int type );
-  static unsigned int loadAndShowAd( unsigned int type );
+  static unsigned int isAdAvailable( unsigned int type, const char *adID = NULL );
+  static void loadAd( unsigned int type, const char *adID = NULL );
+  static unsigned int showAd( unsigned int type, const char *adID = NULL );
+  static unsigned int loadAndShowAd( unsigned int type, const char *adID = NULL );
 
 
 #pragma mark - Analytics

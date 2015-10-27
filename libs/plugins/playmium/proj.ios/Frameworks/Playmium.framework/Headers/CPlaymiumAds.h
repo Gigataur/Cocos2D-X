@@ -25,7 +25,11 @@ struct CPlaymiumAdDef
   Playmium::AdType type;        ///< Ad type (e.g. static, interstitial video, rewarded video, etc.)
   
   CPlaymiumAdDef( Playmium::AdType pAdType );
+  CPlaymiumAdDef( Playmium::AdType pAdType, const char* zoneId );
   ~CPlaymiumAdDef();
+  
+  const char *getZoneIDFromType(Playmium::AdType pAdType);
+  bool isValidZone(const char *adID) const;
 };
 
 /**
