@@ -14,6 +14,8 @@
 #include <Playmium/CPlaymiumSDK.h>
 #include <Playmium/PlaymiumDefines.h>
 
+#include <sstream>
+
 #include "PluginManager.h"  // needed to load plugins
 #include "ProtocolAds.h"    // needed for kAdsReceived enums
 
