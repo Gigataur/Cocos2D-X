@@ -25,8 +25,9 @@
   @public Playmium::AdType type;      ///< Ad type (e.g. static, interstitial video, rewarded video, etc.)
 }
 
-+(id) defWithAdId:(Playmium::AdType) pAdId;
--(id) initWithAdId:(Playmium::AdType) pAdId;
++(id) defWithAdId:(Playmium::AdType) pAdType;
+-(id) initWithAdId:(Playmium::AdType) pAdType;
+-(id) initWithZoneId:(NSString*) pZoneId andAdType:(Playmium::AdType) pAdType;
 
 @end
 

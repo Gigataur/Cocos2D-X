@@ -10,8 +10,10 @@
 #define __PlaymiumSDK__CPlaymiumAds__
 
 #include <cstddef>
+#include <string>
 
 #include "./PlaymiumDefines.h"
+
 
 /**
  * The CPlaymiumAdDef struct serves as a convenience for defining a specific
@@ -19,17 +21,31 @@
  * to the same zone ID, you need both the zone ID and the ad type in order to
  * define a specific instance of an ad.
  */
+#define PLAYMIUM_ADDEF_CHAR_COUNT 12
+
 struct CPlaymiumAdDef
 {
-  const char* zoneId;           ///< Zone ID
-  Playmium::AdType type;        ///< Ad type (e.g. static, interstitial video, rewarded video, etc.)
-  
-  CPlaymiumAdDef( Playmium::AdType pAdType );
-  CPlaymiumAdDef( Playmium::AdType pAdType, const char* zoneId );
+  CPlaymiumAdDef( const Playmium::AdType pAdType );
+  CPlaymiumAdDef( const char *adID );
+  CPlaymiumAdDef( const Playmium::AdType pAdType, const char *adID);
   ~CPlaymiumAdDef();
   
   const char *getZoneIDFromType(Playmium::AdType pAdType);
+  const Playmium::AdType getAdTypeFromID(const char *adID);
+  
+  const char *getAdID() const { return m_AdID; }
+  const Playmium::AdType getAdType() const { return m_Type; }
+  
+  void setAdID(const char *adID);
+  void setAdType(Playmium::AdType type) { m_Type = type; }
+  
+  
+private:
+  CPlaymiumAdDef() {};
   bool isValidZone(const char *adID) const;
+  
+  char m_AdID[PLAYMIUM_ADDEF_CHAR_COUNT]; ///< Ad ID
+  Playmium::AdType m_Type;                ///< Ad type (e.g. static, interstitial video, rewarded video, etc.)
 };
 
 /**
@@ -56,13 +72,13 @@ public:
    * Called when an ad is succesfully shown.
    * @param ad  the definition for the shown ad
    */
-  virtual void onAdShown( const CPlaymiumAdDef& ad ) = 0;
+  virtual void onAdShown( const CPlaymiumAdDef &ad  ) = 0;
   
   /**
    * Called when an ad has failed to display when asked to show.
    * @param ad  the definition for the ad that has failed to display
    */
-  virtual void onAdFailedToDisplay( const CPlaymiumAdDef& ad ) = 0;
+  virtual void onAdFailedToDisplay( const CPlaymiumAdDef &ad ) = 0;
   
   /**
    * Called when an ad was succesfully hidden. This callback gets called regardless
@@ -70,7 +86,7 @@ public:
    * varifying that.
    * @param ad  the definition for the ad that was hidden
    */
-  virtual void onAdHidden( const CPlaymiumAdDef& ad ) = 0;
+  virtual void onAdHidden( const CPlaymiumAdDef &ad ) = 0;
   
   /**
    * Called when an ad's availablity gets updated. Typically called after checking if

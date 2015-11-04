@@ -3,13 +3,14 @@
 The version list for each of the integrated SDK's
 
 
-Fuse          - 2.1.4
-Flurry        - 6.3.0
-Playhaven     - 2.0.2
-Mopub         - 3.1.2
-DMOAnalytics  - 3.1.8
-Localytics    - 3.2.0
-UserVoice     - 3.2.3
+Fuse          	  - 2.3.0
+Flurry        	  - 7.2.0
+Playhaven     	  - 2.0.2 << INACTIVE >>
+Mopub         	  - 3.13.0 << INACTIVE >>
+DMOAnalytics  	  - 3.1.8
+Localytics    	  - 3.2.0
+UserVoice     	  - 3.2.3
+MobileAppTracking - 3.13.0
 
 
 

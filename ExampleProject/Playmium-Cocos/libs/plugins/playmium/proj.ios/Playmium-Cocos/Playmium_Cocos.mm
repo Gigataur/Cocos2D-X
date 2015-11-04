@@ -52,7 +52,7 @@ private:
   
   NSString *generateReturnText(const CPlaymiumAdDef& ad)
   {
-    return [NSString stringWithFormat:@"%s", ad.zoneId];
+    return [NSString stringWithFormat:@"%s", ad.getAdID()];
   }
   
   NSString *generateReturnText(const char* zoneId, const CPlaymiumAdRewardDef& rewardObject)
@@ -62,7 +62,7 @@ private:
   
   NSString *generateReturnText(const CPlaymiumAdDef& ad, bool available)
   {
-    return [NSString stringWithFormat:@"%s|%s", ad.zoneId, available ? "true" : "false"];
+    return [NSString stringWithFormat:@"%s|%s", ad.getAdID(), available ? "true" : "false"];
   }
   
   id m_Owner;
@@ -79,8 +79,11 @@ DefaultPlaymiumAdsListener* adListener = NULL;
   NSString *boolString = devInfo[@"debugMode"];
   bool bUseDebugKeystones = [boolString isEqualToString:@"true"];
   
+  boolString = devInfo[@"enableLogging"];
+  bool bEnableLogging = [boolString isEqualToString:@"true"];
+  
   Playmium::Error error = Playmium::PLAYMIUM_ERR_NONE;
-  CPlaymiumSDK::startSession( bUseDebugKeystones, &error );
+  CPlaymiumSDK::startSession( bUseDebugKeystones, bEnableLogging, &error );
   
   adListener = new DefaultPlaymiumAdsListener();
   adListener->setOwner(self);
@@ -104,27 +107,6 @@ DefaultPlaymiumAdsListener* adListener = NULL;
   Playmium::AdType type = (Playmium::AdType)numberVal;
   
   CPlaymiumAdDef ad( type );
-  CPlaymiumAds::loadAd( ad );
-}
-
-
-- (void) LoadAndShowAd:(NSNumber*) adType : (NSString*) adID
-{
-  int numberVal = [adType intValue];
-  NSLog(@"Playmium: LoadAndShowAd (%d)", numberVal);
-  Playmium::AdType type = (Playmium::AdType)numberVal;
-  
-  CPlaymiumAdDef ad( type, [adID UTF8String]);
-  CPlaymiumAds::loadAndShowAd( ad, NULL );
-}
-
-- (void) LoadAd:(NSNumber*) adType : (NSString*) adID
-{
-  int numberVal = [adType intValue];
-  NSLog(@"Playmium: LoadAd (%d)", numberVal);
-  Playmium::AdType type = (Playmium::AdType)numberVal;
-  
-  CPlaymiumAdDef ad( type, [adID UTF8String]);
   CPlaymiumAds::loadAd( ad );
 }
 

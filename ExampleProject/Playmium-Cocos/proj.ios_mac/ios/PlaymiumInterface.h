@@ -11,6 +11,23 @@
 
 #include "ProtocolAds.h"
 
+class PlaymiumCallbackHandler
+{
+public:
+  PlaymiumCallbackHandler() {};
+  
+  // The callback function that Caller will call.
+  static void callbackFunction(int i, std::string &message);
+  
+  static std::vector<std::string> &split(const std::string &s, char delim, std::vector<std::string> &elems);
+  static std::vector<std::string> split(const std::string &s, char delim);
+  
+  virtual void onReward(const char *AdID, const int rewardID) = 0;
+  virtual void onAdShown(const char *AdID) = 0;
+  virtual void onAdFailed(const char *AdID) = 0;
+  virtual void onStatusUpdate(const char *AdID, const bool bAvailable) = 0;
+};
+
 class PlaymiumInterface
 {
 private:
@@ -26,7 +43,7 @@ public:
   static const char* getStringForErrorCode( unsigned int errorCode );
   static void pauseSession();
   static void resumeSession();
-  static unsigned int startSession( bool debug, cocos2d::plugin::ProtocolAds::ProtocolAdsCallback callback );
+  static unsigned int startSession(bool debugKeystone, bool enableLogging, PlaymiumCallbackHandler *handler);
   static void stopSession();
   static bool showEULA();
   static bool showPrivacyPolicy();

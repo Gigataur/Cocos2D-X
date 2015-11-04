@@ -9,27 +9,6 @@
           <Image Name="PlaymiumForUnity_512_2.png" />
           <Image Name="PlaymiumForUnity_512_4.png" />
           <Image Name="white.png" />
-          <Image Name="PApp_ButtonLarge_Down.png" />
-          <Image Name="PApp_ButtonLarge_Up.png" />
-          <Image Name="PApp_ButtonSmall_Down.png" />
-          <Image Name="PApp_ButtonSmall_Up.png" />
-          <Image Name="PApp_Icon_CrossPromotion.png" />
-          <Image Name="PApp_Icon_DirectDeal.png" />
-          <Image Name="PApp_Icon_Interstitial.png" />
-          <Image Name="PApp_Icon_Video.png" />
-          <Image Name="PApp_Icon_VirtualGoods.png" />
-          <Image Name="PApp_NotificationCircle.png" />
-          <Image Name="PApp_PageTurn.png" />
-          <Image Name="PApp_Icon_VideoReward.png" />
-          <Image Name="PApp_BGGradient.png" />
-          <Image Name="PApp_ErrorBox_3patch.png" />
-          <Image Name="PApp_GearButton_Down.png" />
-          <Image Name="PApp_GearButton_Up.png" />
-          <Image Name="PApp_Icon_EULA.png" />
-          <Image Name="PApp_Icon_PrivacyPolicy.png" />
-          <Image Name="PApp_PopUpWindow.png" />
-          <Image Name="PApp_XButton_Down.png" />
-          <Image Name="PApp_XButton_Up.png" />
         </Folder>
       </RootFolder>
     </Group>

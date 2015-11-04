@@ -49,7 +49,7 @@ public:
    * @param debug 'true' to enable debug mode, 'false' otherwise
    * @param error an Error reference used as an output parameter in order to allow the caller to handle errors
    */
-  static void startSession( bool debug, Playmium::Error* error = NULL );
+  static void startSession( bool debug, bool enableLogging, Playmium::Error* error = NULL );
   
   /**
    * Starts a new Playmium session. This method should be called when the application
@@ -59,7 +59,7 @@ public:
    * @param firstAppLaunch  'true' if this is the first time the application was launched, 'false' otherwise
    * @param error           an Error reference used as an output parameter in order to allow the caller to handle errors
    */
-  static void startSession( bool debug, bool firstAppLaunch, Playmium::Error* error = NULL );
+  static void startSession( bool debug, bool enableLogging, bool firstAppLaunch, Playmium::Error* error = NULL );
   
   /**
    * Stops the current Playmium session. This method be called when the application

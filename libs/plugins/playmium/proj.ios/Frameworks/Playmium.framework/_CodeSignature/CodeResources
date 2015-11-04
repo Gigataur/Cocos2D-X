@@ -6,7 +6,7 @@
 	<dict>
 		<key>Headers/CPlaymiumAds.h</key>
 		<data>
-		YmFQReZgqFNW+APfGIiVMuxA7cE=
+		xtyw1pcGdF9ZooEmM9CnwAAy2mc=
 		</data>
 		<key>Headers/CPlaymiumAnalytics.h</key>
 		<data>
@@ -14,7 +14,7 @@
 		</data>
 		<key>Headers/CPlaymiumSDK.h</key>
 		<data>
-		H2qzhMYgfxXMNY5hST0YmZm4VUY=
+		XXIaAJATmANCdEr/iLaIk4uUQb8=
 		</data>
 		<key>Headers/Playmium.h</key>
 		<data>
@@ -22,7 +22,7 @@
 		</data>
 		<key>Headers/PlaymiumAds.h</key>
 		<data>
-		aLWB6kkh5HfC8qPrOlFExFktJDk=
+		f5jHyQuN9a4qeYJEUc8cplPYxXQ=
 		</data>
 		<key>Headers/PlaymiumAnalytics.h</key>
 		<data>
@@ -42,7 +42,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		YBws8wFjH/tTKb4y4l0ofYtdpS4=
+		qYDheeO+kV+IAIg970Pe7ZuWKbU=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -54,14 +54,14 @@
 		</data>
 		<key>versions.txt</key>
 		<data>
-		P8EoA8+b6oYNOPJQz2ATJApZjuE=
+		1f7tlXDzIJhJs++9w9zYSPf6+kw=
 		</data>
 	</dict>
 	<key>files2</key>
 	<dict>
 		<key>Headers/CPlaymiumAds.h</key>
 		<data>
-		YmFQReZgqFNW+APfGIiVMuxA7cE=
+		xtyw1pcGdF9ZooEmM9CnwAAy2mc=
 		</data>
 		<key>Headers/CPlaymiumAnalytics.h</key>
 		<data>
@@ -69,7 +69,7 @@
 		</data>
 		<key>Headers/CPlaymiumSDK.h</key>
 		<data>
-		H2qzhMYgfxXMNY5hST0YmZm4VUY=
+		XXIaAJATmANCdEr/iLaIk4uUQb8=
 		</data>
 		<key>Headers/Playmium.h</key>
 		<data>
@@ -77,7 +77,7 @@
 		</data>
 		<key>Headers/PlaymiumAds.h</key>
 		<data>
-		aLWB6kkh5HfC8qPrOlFExFktJDk=
+		f5jHyQuN9a4qeYJEUc8cplPYxXQ=
 		</data>
 		<key>Headers/PlaymiumAnalytics.h</key>
 		<data>
@@ -105,7 +105,7 @@
 		</data>
 		<key>versions.txt</key>
 		<data>
-		P8EoA8+b6oYNOPJQz2ATJApZjuE=
+		1f7tlXDzIJhJs++9w9zYSPf6+kw=
 		</data>
 	</dict>
 	<key>rules</key>

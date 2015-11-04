@@ -19,110 +19,47 @@ using namespace cocos2d::ui;
 // this is a local static var to update the error code visually in our test application
 static ButtonHandlers *s_Handlers = NULL;
 
-
-void CallbackHandler::callbackFunction(int type, std::string &message)
+void GameCallbackHandler::onReward(const char *AdID, const int rewardID)
 {
-#ifdef CC_TARGET_OS_IPHONE
-  std::vector<std::string> splitArray = split(message, '|');
+  std::string messageText = "REWARD: ";
+  messageText.append(AdID);
   
-  switch(type)
+  if(s_Handlers)
   {
-    case cocos2d::plugin::kAdsShown: // ad is shown
-    {
-      // log out sucess with ad id from the message
-      std::string messageText = "AD Shown: ";
-      messageText.append(splitArray[0]);
-      
-      if(s_Handlers)
-        s_Handlers->setErrorText(messageText);
-      break;
-    }
-      
-    case cocos2d::plugin::kAdsDismissed: // ad is hidden
-    {
-      break;
-    }
-      
-    case cocos2d::plugin::kPointsSpendSucceed: // reward points recieved
-    {
-      //split to get ad id and the reward amount
-      int rewardAmount = atoi(splitArray[1].c_str());
-      
-      std::string messageText = "REWARD: ";
-      messageText.append(splitArray[0]);
-      messageText.append(" Amount: ");
-      messageText.append(splitArray[1]);
-      
-      if(s_Handlers)
-      {
-        s_Handlers->setErrorText(messageText);
-        s_Handlers->addReward(rewardAmount);
-      }
-      break;
-    }
-      
-    case cocos2d::plugin::kNetworkError: // failed to show ad
-    {
-      // error only has id same as shown /dismissed
-      std::string messageText = "AD FAILED: ";
-      messageText.append(splitArray[0]);
-      
-      if(s_Handlers)
-        s_Handlers->setErrorText(messageText);
-
-      break;
-    }
-      
-    case cocos2d::plugin::kUnknownError: // update status return value.
-    {
-      // has if the zone if was available or not.
-      bool bAvailable = strcmp(splitArray[1].c_str(), "true") == 0;
-      
-      if(bAvailable == false)
-      {
-        std::string messageText = "AD FAILED LOAD: ";
-        messageText.append(splitArray[0]);
-        
-        if(s_Handlers)
-          s_Handlers->setErrorText(messageText);
-      }
-      
-      break;
-    }
-      
-      
-    default:
-    {
-      std::string messageText = "UNKOWN ERROR CODE Please check with support! playme@glitchsoft.com";
-      
-      if(s_Handlers)
-        s_Handlers->setErrorText(messageText);
-      break;
-    }
+    s_Handlers->setErrorText(messageText);
+    s_Handlers->addReward(rewardID);
   }
-#endif // CC_TARGET_OS_IPHONE
 }
 
-// helper functions for spliting the string apart for the error messages
-std::vector<std::string> &CallbackHandler::split(const std::string &s, char delim, std::vector<std::string> &elems)
+void GameCallbackHandler::onAdShown(const char *AdID)
 {
-  std::stringstream ss(s);
-  std::string item;
-  while (std::getline(ss, item, delim))
+  std::string messageText = "AD Shown: ";
+  messageText.append(AdID);
+  
+  if(s_Handlers)
+    s_Handlers->setErrorText(messageText);
+}
+
+void GameCallbackHandler::onAdFailed(const char *AdID)
+{
+  std::string messageText = "AD FAILED: ";
+  messageText.append(AdID);
+  
+  if(s_Handlers)
+    s_Handlers->setErrorText(messageText);
+}
+
+void GameCallbackHandler::onStatusUpdate(const char *AdID, const bool bAvailable)
+{
+  if(bAvailable == false)
   {
-    elems.push_back(item);
+    std::string messageText = "AD FAILED LOAD: ";
+    messageText.append(AdID);
+    
+    if(s_Handlers)
+      s_Handlers->setErrorText(messageText);
   }
-  return elems;
 }
-
-
-std::vector<std::string> CallbackHandler::split(const std::string &s, char delim)
-{
-  std::vector<std::string> elems;
-  split(s, delim, elems);
-  return elems;
-}
-
 
 
 ButtonHandlers::ButtonHandlers(cocos2d::Node* sceneNode)
@@ -332,7 +269,7 @@ void ButtonHandlers::handleButtonPress(cocos2d::Ref* pSender)
 #ifdef CC_TARGET_OS_IPHONE
   if(pSender == m_StartSession)
   {
-    PlaymiumInterface::startSession(true, &m_handler.callbackFunction);
+    PlaymiumInterface::startSession(true, false, &m_handler);
     enableButtons(true);
   }
   
@@ -363,8 +300,7 @@ void ButtonHandlers::handleButtonPress(cocos2d::Ref* pSender)
   
   if(pSender == m_DirectDeal)
   {
-    //PlaymiumInterface::loadAndShowAd( Playmium::AD_TYPE_DIRECT_DEALS );
-    PlaymiumInterface::loadAndShowAd( Playmium::AD_TYPE_REWARDED_VIDEO, "642fa384" );
+    PlaymiumInterface::loadAndShowAd( Playmium::AD_TYPE_DIRECT_DEALS );
   }
   
   if (pSender == m_OptionsButton)
