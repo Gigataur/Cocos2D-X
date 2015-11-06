@@ -1,4 +1,4 @@
-# Playmium v1.10
+# Playmium v1.3.1
 
 This is the Cocos 2dx plugin for the playmium publishing suite. 
 

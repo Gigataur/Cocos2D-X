@@ -250,7 +250,7 @@
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
 					../../protocols/include,
 				);
-				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -292,7 +292,7 @@
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
 					../../protocols/include,
 				);
-				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -302,7 +302,7 @@
 		6DACD4E01BA73C610029991B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Distribution: GlitchSoft Corporation (JTE5ECYQD5)";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Tim Sandwell (Q34ETHKH7U)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Frameworks/**",
@@ -316,7 +316,7 @@
 				LIBRARY_SEARCH_PATHS = "$(SRCROOT)/../../../protocols/platform/ios";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "a2865ec1-5891-473f-b486-6cca7c00893d";
+				PROVISIONING_PROFILE = "1819e299-7f4f-41ce-8138-77ae6ed5ab4b";
 				SKIP_INSTALL = YES;
 			};
 			name = Debug;
@@ -324,7 +324,7 @@
 		6DACD4E11BA73C610029991B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Distribution: GlitchSoft Corporation (JTE5ECYQD5)";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Tim Sandwell (Q34ETHKH7U)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Frameworks/**",
@@ -338,7 +338,7 @@
 				LIBRARY_SEARCH_PATHS = "$(SRCROOT)/../../../protocols/platform/ios";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "a2865ec1-5891-473f-b486-6cca7c00893d";
+				PROVISIONING_PROFILE = "1819e299-7f4f-41ce-8138-77ae6ed5ab4b";
 				SKIP_INSTALL = YES;
 			};
 			name = Release;
