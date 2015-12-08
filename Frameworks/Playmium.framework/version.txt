@@ -1,0 +1,32 @@
+
+
+********************************************
+
+              Playmium v1.3.5
+
+********************************************
+
+
+
+Build Notes:
+
+1.3.5
+- Added callback for push notifications
+
+
+1.3.4
+- Push Notifications working in Unity
+
+
+1.3.3
+- added push notifications to playmium
+
+
+1.3.1
+- Updated to version 1.3.1
+- Fixed constructor issues with playmium ads and load and playing them
+- Fixed callback string id's
+- Set target version 8.0
+- Added printing version when loading playmium
+- Added localization support to notifications
+- ads can have their ad ID specified in the calls now. 

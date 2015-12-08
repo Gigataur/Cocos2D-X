@@ -27,6 +27,7 @@
 #import "cocos2d.h"
 #import "AppDelegate.h"
 #import "RootViewController.h"
+#import <Playmium/Playmium.h>
 
 @implementation AppController
 
@@ -86,6 +87,8 @@ static AppDelegate s_sharedApplication;
 
     app->run();
 
+    [PlaymiumSDK didFinishLaunchingWithOptions:launchOptions];
+  
     return YES;
 }
 

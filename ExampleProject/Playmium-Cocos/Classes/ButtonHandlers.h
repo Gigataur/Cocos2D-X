@@ -23,6 +23,7 @@ class GameCallbackHandler : public PlaymiumCallbackHandler
   virtual void onAdShown(const char *AdID);
   virtual void onAdFailed(const char *AdID);
   virtual void onStatusUpdate(const char *AdID, const bool bAvailable);
+  virtual void onPushNotificationClicked(const char *key, const char *data);
 };
 
 

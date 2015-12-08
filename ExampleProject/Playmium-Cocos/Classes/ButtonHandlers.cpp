@@ -61,6 +61,11 @@ void GameCallbackHandler::onStatusUpdate(const char *AdID, const bool bAvailable
   }
 }
 
+void GameCallbackHandler::onPushNotificationClicked(const char *key, const char *data)
+{
+  //handle push notification data;
+}
+
 
 ButtonHandlers::ButtonHandlers(cocos2d::Node* sceneNode)
   : m_reward(0)
@@ -243,6 +248,8 @@ void ButtonHandlers::enableButtons(bool bEnabled)
   }
 }
 
+
+
 void ButtonHandlers::setErrorText(std::string &message)
 {
   if(m_ErrorCode == NULL)
@@ -269,7 +276,11 @@ void ButtonHandlers::handleButtonPress(cocos2d::Ref* pSender)
 #ifdef CC_TARGET_OS_IPHONE
   if(pSender == m_StartSession)
   {
-    PlaymiumInterface::startSession(true, false, &m_handler);
+    // enable debug
+    bool bDebugKeystone = true;
+    // enable logging
+    bool bEnableLogging = true;
+    PlaymiumInterface::startSession(bDebugKeystone, bEnableLogging, &m_handler);
     enableButtons(true);
   }
   
