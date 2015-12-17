@@ -80,10 +80,11 @@
  */
 +(void) sendKeystoneFilePath:(NSString*) directory;
 
-///*
-// *
-// */
-//+(void) showUserFeedbackForm:(const Playmium::UserFeedbackType&) feedbackType;
+/**
+ * Opens the  using the device's internet browser. Calling
+ * this function will force the application to the background.
+ */
++(void) showUserFeedbackForm:(const Playmium::UserFeedbackType&) feedbackType;
 
 /**
  * Stores the launch options used for various features of the SDK

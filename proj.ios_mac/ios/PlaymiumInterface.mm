@@ -13,6 +13,7 @@
 #include <Playmium/CPlaymiumAds.h>
 #include <Playmium/CPlaymiumSDK.h>
 #include <Playmium/PlaymiumDefines.h>
+#include <Playmium/CPlaymiumUserRating.h>
 
 #include <sstream>
 
@@ -92,93 +93,38 @@ class DefaultPlaymiumAdsListener
 public:
   virtual void onAdShown( const CPlaymiumAdDef& ad )
   {
-    std::string params([generateReturnText(ad) UTF8String]);
-    std::vector<std::string> splitArray = split(params, PARAM_DELIMITER);
-    
-    // no strings so exit here nothing to parse.
-    if(splitArray.size() <= 0)
-    {
-      return;
-    }
-    
     if(s_handler != NULL)
     {
-      s_handler->onAdShown(splitArray[0].c_str());
+      s_handler->onAdShown(ad.getAdID());
     }
   }
   
   virtual void onAdFailedToDisplay( const CPlaymiumAdDef& ad )
   {
-    std::string params([generateReturnText(ad) UTF8String]);
-    std::vector<std::string> splitArray = split(params, PARAM_DELIMITER);
-    
-    // no strings so exit here nothing to parse.
-    if(splitArray.size() <= 0)
-    {
-      return;
-    }
-    
     if(s_handler != NULL)
     {
-      s_handler->onAdFailed(splitArray[0].c_str());
+      s_handler->onAdFailed(ad.getAdID());
     }
   }
   
   virtual void onAdHidden( const CPlaymiumAdDef& ad )
   {
-    std::string params([generateReturnText(ad) UTF8String]);
-    std::vector<std::string> splitArray = split(params, PARAM_DELIMITER);
-    
-    // no strings so exit here nothing to parse.
-    if(splitArray.size() <= 0)
-    {
-      return;
-    }
-    
     //-- currently no callback for this
   }
   
   virtual void onAdAvailabilityUpdated( const CPlaymiumAdDef& ad, bool available )
   {
-    std::string params([generateReturnText(ad) UTF8String]);
-    std::vector<std::string> splitArray = split(params, PARAM_DELIMITER);
-    
-    // no strings so exit here nothing to parse.
-    if(splitArray.size() <= 0)
-    {
-      return;
-    }
-    
-    // has if the zone if was available or not.
-    bool bAvailable = strcmp(splitArray[1].c_str(), "true") == 0;
-    
     if(s_handler != NULL)
     {
-      s_handler->onStatusUpdate(splitArray[0].c_str(), bAvailable);
+      s_handler->onStatusUpdate(ad.getAdID(), available);
     }
   }
   
   virtual void onRewardAdCompleted( const char* zoneId, const CPlaymiumAdRewardDef& rewardObject )
   {
-    std::string params([generateReturnText(zoneId,rewardObject) UTF8String]);
-    std::vector<std::string> splitArray = split(params, PARAM_DELIMITER);
-    
-    // no strings so exit here nothing to parse.
-    if(splitArray.size() <= 0)
-    {
-      return;
-    }
-    
-    //split to get ad id and the reward amount
-    int rewardID = -1;
-    if(splitArray[1].length() > 0)
-    {
-      rewardID = atoi(splitArray[1].c_str());
-    }
-    
     if(s_handler != NULL)
     {
-      s_handler->onReward(splitArray[0].c_str(), rewardID);
+      s_handler->onReward(zoneId, rewardObject.rewardAmount);
     }
   }
   
@@ -288,12 +234,25 @@ bool PlaymiumInterface::showEULA()
   return CPlaymiumSDK::showEULA();
 }
 
+void PlaymiumInterface::sendFeedback()
+{
+  return CPlaymiumSDK::showUserFeedbackForm(Playmium::UserFeedbackType::FEEDBACK_TYPE_GENERAL);
+}
 
 bool PlaymiumInterface::showPrivacyPolicy()
 {
   return CPlaymiumSDK::showPrivacyPolicy();
 }
-  
+
+void PlaymiumInterface::showOptionalUserRating()
+{
+  CPlaymiumUserRating::showOptionalUserRatingDlg();
+}
+
+void PlaymiumInterface::showUserRating()
+{
+  CPlaymiumUserRating::showUserRatingDlg();
+}
   
 #pragma mark - Ads API
 ///////////////////////////////
@@ -338,7 +297,12 @@ unsigned int PlaymiumInterface::loadAndShowAd( unsigned int type, const char *ad
   CPlaymiumAds::loadAndShowAd( ad, &error );
   return (unsigned int)error;
 }
-  
+
+const char *PlaymiumInterface::getAdId(unsigned int type)
+{
+  // this is actually a stored string in the keystone so its safe to pass as a const char.
+  return CPlaymiumAdDef::getZoneIDFromType((Playmium::AdType)type);
+}
   
 #pragma mark - Analytics
 ///////////////////////////////

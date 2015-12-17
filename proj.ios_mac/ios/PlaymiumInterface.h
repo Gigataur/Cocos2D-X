@@ -39,6 +39,9 @@ public:
   static void stopSession();
   static bool showEULA();
   static bool showPrivacyPolicy();
+  static void sendFeedback();
+  static void showOptionalUserRating();
+  static void showUserRating();
 
 #pragma mark - Ads API
   ///////////////////////////////
@@ -50,7 +53,7 @@ public:
   static void loadAd( unsigned int type, const char *adID = NULL );
   static unsigned int showAd( unsigned int type, const char *adID = NULL );
   static unsigned int loadAndShowAd( unsigned int type, const char *adID = NULL );
-
+  static const char *getAdId(unsigned int type);
 
 #pragma mark - Analytics
   ///////////////////////////////

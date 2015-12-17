@@ -59,6 +59,15 @@ void GameCallbackHandler::onStatusUpdate(const char *AdID, const bool bAvailable
     if(s_Handlers)
       s_Handlers->setErrorText(messageText);
   }
+  
+  const char *loadedAdId = s_Handlers->getLoadAdId();
+  if(bAvailable && loadedAdId != NULL && AdID != NULL)
+  {
+    if( strcmp(loadedAdId, AdID) == 0)
+    {
+      s_Handlers->enablePlayButton();
+    }
+  }
 }
 
 void GameCallbackHandler::onPushNotificationClicked(const char *key, const char *data)
@@ -85,8 +94,11 @@ ButtonHandlers::ButtonHandlers(cocos2d::Node* sceneNode)
   m_Interstitial = static_cast<Button*>(m_RootNode->getChildByName("Button_Interstitial"));
   m_Interstitial->addTouchEventListener(CC_CALLBACK_2(ButtonHandlers::menuCallback, this));
   
-  m_Video = static_cast<Button*>(m_RootNode->getChildByName("Button_Video"));
-  m_Video->addTouchEventListener(CC_CALLBACK_2(ButtonHandlers::menuCallback, this));
+  m_VideoPlay = static_cast<Button*>(m_RootNode->getChildByName("Button_Video"));
+  m_VideoPlay->addTouchEventListener(CC_CALLBACK_2(ButtonHandlers::menuCallback, this));
+  
+  m_VideoLoad = static_cast<Button*>(m_RootNode->getChildByName("Button_Video_Load"));
+  m_VideoLoad->addTouchEventListener(CC_CALLBACK_2(ButtonHandlers::menuCallback, this));
   
   m_RewardVideo = static_cast<Button*>(m_RootNode->getChildByName("Button_VideoReward"));
   m_RewardVideo->addTouchEventListener(CC_CALLBACK_2(ButtonHandlers::menuCallback, this));
@@ -117,8 +129,14 @@ ButtonHandlers::ButtonHandlers(cocos2d::Node* sceneNode)
     m_EULAButton = static_cast<Button*>(m_OptionsMenu->getChildByName("Button_EULA"));
     m_EULAButton->addTouchEventListener(CC_CALLBACK_2(ButtonHandlers::menuCallback, this));
 
+    m_FeedbackButton = static_cast<Button*>(m_OptionsMenu->getChildByName("Button_Feedback"));
+    m_FeedbackButton->addTouchEventListener(CC_CALLBACK_2(ButtonHandlers::menuCallback, this));
+    
     m_PolicyButton = static_cast<Button*>(m_OptionsMenu->getChildByName("Button_Policy"));
     m_PolicyButton->addTouchEventListener(CC_CALLBACK_2(ButtonHandlers::menuCallback, this));
+    
+    m_RateButton = static_cast<Button*>(m_OptionsMenu->getChildByName("Button_Rateapp"));
+    m_RateButton->addTouchEventListener(CC_CALLBACK_2(ButtonHandlers::menuCallback, this));
   }
   else
   {
@@ -131,6 +149,8 @@ ButtonHandlers::ButtonHandlers(cocos2d::Node* sceneNode)
   m_RootNode->setVisible(false);
   m_StartSession->setEnabled(false);
   m_SplashScreen->setVisible(true);
+  
+  m_loadVideoId = "";
   
   enableButtons(false);
 }
@@ -211,10 +231,16 @@ void ButtonHandlers::enableButtons(bool bEnabled)
     m_Interstitial->setEnabled(bEnabled);
   }
   
-  if(m_Video)
+  if(m_VideoLoad)
   {
-    m_Video->setVisible(bEnabled);
-    m_Video->setEnabled(bEnabled);
+    m_VideoLoad->setVisible(bEnabled && m_loadVideoId.length() <= 1);
+    m_VideoLoad->setEnabled(bEnabled && m_loadVideoId.length() <= 1);
+  }
+  
+  if(m_VideoPlay)
+  {
+    m_VideoPlay->setVisible(bEnabled && m_loadVideoId.length() > 1);
+    m_VideoPlay->setEnabled(bEnabled && m_loadVideoId.length() > 1);
   }
   
   if(m_RewardVideo)
@@ -270,6 +296,20 @@ void ButtonHandlers::addReward(int number)
   m_RewardText->setString(rewardText);
 }
 
+void ButtonHandlers::enablePlayButton()
+{
+  if(m_VideoPlay)
+  {
+    m_VideoPlay->setVisible(true);
+    m_VideoPlay->setEnabled(true);
+  }
+  
+  if(m_VideoLoad)
+  {
+    m_VideoLoad->setVisible(false);
+    m_VideoLoad->setEnabled(false);
+  }
+}
 
 void ButtonHandlers::handleButtonPress(cocos2d::Ref* pSender)
 {
@@ -289,9 +329,17 @@ void ButtonHandlers::handleButtonPress(cocos2d::Ref* pSender)
     PlaymiumInterface::loadAndShowAd( Playmium::AD_TYPE_STATIC );
   }
   
-  if(pSender == m_Video)
+  
+  if(pSender == m_VideoLoad)
   {
-    PlaymiumInterface::loadAndShowAd( Playmium::AD_TYPE_VIDEO );
+    m_loadVideoId = PlaymiumInterface::getAdId(Playmium::AD_TYPE_VIDEO);
+    PlaymiumInterface::loadAd( Playmium::AD_TYPE_VIDEO );
+  }
+  
+  
+  if(pSender == m_VideoPlay)
+  {
+    PlaymiumInterface::showAd( Playmium::AD_TYPE_VIDEO );
   }
   
   if(pSender == m_RewardVideo)
@@ -328,7 +376,7 @@ void ButtonHandlers::handleButtonPress(cocos2d::Ref* pSender)
     if (m_OptionsMenu != NULL)
     {
       enableButtons(true);
-      m_OptionsMenu->setVisible(false);
+      m_OptionsMenu->setVisible(false); 
     }
   }
   
@@ -337,10 +385,21 @@ void ButtonHandlers::handleButtonPress(cocos2d::Ref* pSender)
     PlaymiumInterface::showEULA();
   }
   
+  if (pSender == m_FeedbackButton) 
+  {
+    PlaymiumInterface::sendFeedback();
+  }
+  
   if (pSender == m_PolicyButton)
   {
     PlaymiumInterface::showPrivacyPolicy();
   }
+  
+  if (pSender == m_RateButton)
+  {
+    PlaymiumInterface::showOptionalUserRating();
+  }
+  
   
   
 #endif // #ifdef CC_TARGET_OS_IPHONE

@@ -85,11 +85,11 @@ public:
    */
   static void sendKeystoneFilePath(const char *directory);
   
-//  /**
-//   * Opens the  using the device's internet browser. Calling
-//   * this function will force the application to the background.
-//   */
-//  static void showUserFeedbackForm( Playmium::UserFeedbackType feedbackType );
+  /**
+   * Opens the  using the device's internet browser. Calling
+   * this function will force the application to the background.
+   */
+  static void showUserFeedbackForm( Playmium::UserFeedbackType feedbackType );
 };
 
 #endif /* defined(__PlaymiumSDK__CPlaymiumSDK__) */

@@ -6,7 +6,7 @@
 	<dict>
 		<key>Headers/CPlaymiumAds.h</key>
 		<data>
-		60+JbQJ11/SPzpiNM8bsSojsi9o=
+		AGc8MmVZeEeSLk2cV06lkO25iPg=
 		</data>
 		<key>Headers/CPlaymiumAnalytics.h</key>
 		<data>
@@ -14,7 +14,11 @@
 		</data>
 		<key>Headers/CPlaymiumSDK.h</key>
 		<data>
-		XXIaAJATmANCdEr/iLaIk4uUQb8=
+		xvZQZA3ywmPLBTEnMyR3Oa5qORg=
+		</data>
+		<key>Headers/CPlaymiumUserRating.h</key>
+		<data>
+		rGORh8aJZPy68Hiami4mn1qSY2U=
 		</data>
 		<key>Headers/Playmium.h</key>
 		<data>
@@ -34,15 +38,15 @@
 		</data>
 		<key>Headers/PlaymiumDefines.h</key>
 		<data>
-		hH5FxPnoVUzi4/qYXlVhU1KFeVU=
+		V+eeuihsAcRN64llN7qqFeAphBQ=
 		</data>
 		<key>Headers/PlaymiumSDK.h</key>
 		<data>
-		MKQPValpObPFUg6uBL94zgfrQPg=
+		kSoN/9HZFmtAVyEOiXe1bA9SIrI=
 		</data>
 		<key>Info.plist</key>
 		<data>
-		TKxWzkioSvXgWJFkou/wAZYPU50=
+		AGUrpFeklMDsFHI0rTpH4n/Ct94=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -66,14 +70,14 @@
 		</data>
 		<key>version.txt</key>
 		<data>
-		/zU0JR/NmKbcGuAenynMT5be8Nk=
+		rQgUucjXg9PWwAc6R4WEpRfVzUk=
 		</data>
 	</dict>
 	<key>files2</key>
 	<dict>
 		<key>Headers/CPlaymiumAds.h</key>
 		<data>
-		60+JbQJ11/SPzpiNM8bsSojsi9o=
+		AGc8MmVZeEeSLk2cV06lkO25iPg=
 		</data>
 		<key>Headers/CPlaymiumAnalytics.h</key>
 		<data>
@@ -81,7 +85,11 @@
 		</data>
 		<key>Headers/CPlaymiumSDK.h</key>
 		<data>
-		XXIaAJATmANCdEr/iLaIk4uUQb8=
+		xvZQZA3ywmPLBTEnMyR3Oa5qORg=
+		</data>
+		<key>Headers/CPlaymiumUserRating.h</key>
+		<data>
+		rGORh8aJZPy68Hiami4mn1qSY2U=
 		</data>
 		<key>Headers/Playmium.h</key>
 		<data>
@@ -101,11 +109,11 @@
 		</data>
 		<key>Headers/PlaymiumDefines.h</key>
 		<data>
-		hH5FxPnoVUzi4/qYXlVhU1KFeVU=
+		V+eeuihsAcRN64llN7qqFeAphBQ=
 		</data>
 		<key>Headers/PlaymiumSDK.h</key>
 		<data>
-		MKQPValpObPFUg6uBL94zgfrQPg=
+		kSoN/9HZFmtAVyEOiXe1bA9SIrI=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -129,7 +137,7 @@
 		</data>
 		<key>version.txt</key>
 		<data>
-		/zU0JR/NmKbcGuAenynMT5be8Nk=
+		rQgUucjXg9PWwAc6R4WEpRfVzUk=
 		</data>
 	</dict>
 	<key>rules</key>

@@ -6,7 +6,7 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "../Classes/ButtonHandlers.cpp"
@@ -15,7 +15,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "66"
             endingLineNumber = "66"
-            landmarkName = "GameCallbackHandler::onPushNotificationClicked(const char *key, const char *data)"
+            landmarkName = "GameCallbackHandler::onStatusUpdate(const char *AdID, const bool bAvailable)"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -31,7 +31,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "352"
             endingLineNumber = "352"
-            landmarkName = "ButtonHandlers::onPause()"
+            landmarkName = "ButtonHandlers::handleButtonPress(cocos2d::Ref* pSender)"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

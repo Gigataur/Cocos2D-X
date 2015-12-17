@@ -47,7 +47,7 @@
 		521A8E6419F0C34300D177D7 /* Default-667h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 521A8E6219F0C34300D177D7 /* Default-667h@2x.png */; };
 		521A8E6519F0C34300D177D7 /* Default-736h@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 521A8E6319F0C34300D177D7 /* Default-736h@3x.png */; };
 		686C4C598BE2D33D72717162 /* res in Resources */ = {isa = PBXBuildFile; fileRef = 59034C45B7318DA5E4A7B462 /* res */; };
-		6D0FDF531BB0582800F7DACC /* Playmium.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6D6F99B91BA9F7C000538E6A /* Playmium.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		6D5AB69A1C23446B007278E8 /* PlaymiumStrings.dat in Resources */ = {isa = PBXBuildFile; fileRef = 6D5AB6991C23446B007278E8 /* PlaymiumStrings.dat */; };
 		6D6F99AB1BA9F6D100538E6A /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DD80DF61BA9DF6500B3358D /* MediaPlayer.framework */; };
 		6D6F99AC1BA9F6E100538E6A /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DD80DF21BA9DEC400B3358D /* Security.framework */; };
 		6D6F99AF1BA9F6FD00538E6A /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D6F99AE1BA9F6FD00538E6A /* AdSupport.framework */; };
@@ -56,7 +56,6 @@
 		6D6F99B41BA9F73000538E6A /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D6F99B31BA9F73000538E6A /* StoreKit.framework */; };
 		6D6F99B61BA9F74700538E6A /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D6F99B51BA9F74600538E6A /* MessageUI.framework */; };
 		6D6F99B81BA9F75800538E6A /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D6F99B71BA9F75800538E6A /* CoreTelephony.framework */; };
-		6D6F99BA1BA9F7C000538E6A /* Playmium.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D6F99B91BA9F7C000538E6A /* Playmium.framework */; };
 		6D8C6DED1BAB4AE9009618F0 /* Debug.keystone in Resources */ = {isa = PBXBuildFile; fileRef = 6D8C6DEA1BAB4AE9009618F0 /* Debug.keystone */; };
 		6D8C6DEE1BAB4AE9009618F0 /* Default.keystone in Resources */ = {isa = PBXBuildFile; fileRef = 6D8C6DEB1BAB4AE9009618F0 /* Default.keystone */; };
 		6D8C6DEF1BAB4AE9009618F0 /* LocalNotificationData.localNotif in Resources */ = {isa = PBXBuildFile; fileRef = 6D8C6DEC1BAB4AE9009618F0 /* LocalNotificationData.localNotif */; };
@@ -72,6 +71,8 @@
 		BF1712471292920000B8313A /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = BF170DB412928DE900B8313A /* libz.dylib */; };
 		BF1C47F01293687400B63C5D /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF1C47EA1293683800B63C5D /* QuartzCore.framework */; };
 		C1A34EC3B3688816E3878B27 /* libcocos2d iOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 89AD4506B527F53C15871621 /* libcocos2d iOS.a */; };
+		C68DCD501C16333C00C7A111 /* Playmium.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C68DCD4D1C16331200C7A111 /* Playmium.framework */; };
+		C68DCD511C16333C00C7A111 /* Playmium.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C68DCD4D1C16331200C7A111 /* Playmium.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		D44C620C132DFF330009C878 /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D44C620B132DFF330009C878 /* OpenAL.framework */; };
 		D44C620E132DFF430009C878 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D44C620D132DFF430009C878 /* AVFoundation.framework */; };
 		D44C6210132DFF4E0009C878 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D44C620F132DFF4E0009C878 /* AudioToolbox.framework */; };
@@ -81,13 +82,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		6D0FDF541BB0582800F7DACC /* Embed Frameworks */ = {
+		C68DCD521C16333C00C7A111 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				6D0FDF531BB0582800F7DACC /* Playmium.framework in Embed Frameworks */,
+				C68DCD511C16333C00C7A111 /* Playmium.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -138,12 +139,12 @@
 		521A8E6219F0C34300D177D7 /* Default-667h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-667h@2x.png"; sourceTree = "<group>"; };
 		521A8E6319F0C34300D177D7 /* Default-736h@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-736h@3x.png"; sourceTree = "<group>"; };
 		59034C45B7318DA5E4A7B462 /* res */ = {isa = PBXFileReference; lastKnownFileType = "?"; name = res; path = ../Resources/res; sourceTree = "<group>"; };
+		6D5AB6991C23446B007278E8 /* PlaymiumStrings.dat */ = {isa = PBXFileReference; lastKnownFileType = file; path = PlaymiumStrings.dat; sourceTree = "<group>"; };
 		6D6F99AE1BA9F6FD00538E6A /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.4.sdk/System/Library/Frameworks/AdSupport.framework; sourceTree = DEVELOPER_DIR; };
 		6D6F99B01BA9F70A00538E6A /* GameController.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameController.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.4.sdk/System/Library/Frameworks/GameController.framework; sourceTree = DEVELOPER_DIR; };
 		6D6F99B31BA9F73000538E6A /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.4.sdk/System/Library/Frameworks/StoreKit.framework; sourceTree = DEVELOPER_DIR; };
 		6D6F99B51BA9F74600538E6A /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.4.sdk/System/Library/Frameworks/MessageUI.framework; sourceTree = DEVELOPER_DIR; };
 		6D6F99B71BA9F75800538E6A /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.4.sdk/System/Library/Frameworks/CoreTelephony.framework; sourceTree = DEVELOPER_DIR; };
-		6D6F99B91BA9F7C000538E6A /* Playmium.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Playmium.framework; path = ../Frameworks/Playmium.framework; sourceTree = "<group>"; };
 		6D8C6DEA1BAB4AE9009618F0 /* Debug.keystone */ = {isa = PBXFileReference; lastKnownFileType = file; path = Debug.keystone; sourceTree = "<group>"; };
 		6D8C6DEB1BAB4AE9009618F0 /* Default.keystone */ = {isa = PBXFileReference; lastKnownFileType = file; path = Default.keystone; sourceTree = "<group>"; };
 		6D8C6DEC1BAB4AE9009618F0 /* LocalNotificationData.localNotif */ = {isa = PBXFileReference; lastKnownFileType = file; path = LocalNotificationData.localNotif; sourceTree = "<group>"; };
@@ -165,6 +166,7 @@
 		99B12AF91BB33F080060E426 /* PlaymiumInterface.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = PlaymiumInterface.mm; path = ios/PlaymiumInterface.mm; sourceTree = SOURCE_ROOT; };
 		BF170DB412928DE900B8313A /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		BF1C47EA1293683800B63C5D /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		C68DCD4D1C16331200C7A111 /* Playmium.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Playmium.framework; path = ../libs/Frameworks/Playmium.framework; sourceTree = "<group>"; };
 		D44C620B132DFF330009C878 /* OpenAL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenAL.framework; path = System/Library/Frameworks/OpenAL.framework; sourceTree = SDKROOT; };
 		D44C620D132DFF430009C878 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		D44C620F132DFF4E0009C878 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
@@ -177,13 +179,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6D6F99BA1BA9F7C000538E6A /* Playmium.framework in Frameworks */,
 				6D6F99B81BA9F75800538E6A /* CoreTelephony.framework in Frameworks */,
 				6D6F99B61BA9F74700538E6A /* MessageUI.framework in Frameworks */,
 				6D6F99B41BA9F73000538E6A /* StoreKit.framework in Frameworks */,
 				6D6F99B21BA9F72400538E6A /* SystemConfiguration.framework in Frameworks */,
 				6D6F99B11BA9F70A00538E6A /* GameController.framework in Frameworks */,
 				6D6F99AF1BA9F6FD00538E6A /* AdSupport.framework in Frameworks */,
+				C68DCD501C16333C00C7A111 /* Playmium.framework in Frameworks */,
 				6D6F99AC1BA9F6E100538E6A /* Security.framework in Frameworks */,
 				6D6F99AB1BA9F6D100538E6A /* MediaPlayer.framework in Frameworks */,
 				6DD80DFD1BA9DFE000B3358D /* CoreMotion.framework in Frameworks */,
@@ -252,6 +254,7 @@
 		29B97314FDCFA39411CA2CEA /* CustomTemplate */ = {
 			isa = PBXGroup;
 			children = (
+				C68DCD4D1C16331200C7A111 /* Playmium.framework */,
 				46880B8319C43A87006E1F66 /* Classes */,
 				46880B7519C43A67006E1F66 /* Resources */,
 				29B97323FDCFA39411CA2CEA /* Frameworks */,
@@ -267,7 +270,6 @@
 		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				6D6F99B91BA9F7C000538E6A /* Playmium.framework */,
 				6D6F99B71BA9F75800538E6A /* CoreTelephony.framework */,
 				6D6F99B51BA9F74600538E6A /* MessageUI.framework */,
 				6D6F99B31BA9F73000538E6A /* StoreKit.framework */,
@@ -375,6 +377,7 @@
 		6D8C6DF01BAB4B32009618F0 /* Keystones */ = {
 			isa = PBXGroup;
 			children = (
+				6D5AB6991C23446B007278E8 /* PlaymiumStrings.dat */,
 				6D8C6DEA1BAB4AE9009618F0 /* Debug.keystone */,
 				6D8C6DEB1BAB4AE9009618F0 /* Default.keystone */,
 				6D8C6DEC1BAB4AE9009618F0 /* LocalNotificationData.localNotif */,
@@ -409,7 +412,7 @@
 				1D60588D0D05DD3D006BFB54 /* Resources */,
 				1D60588E0D05DD3D006BFB54 /* Sources */,
 				1D60588F0D05DD3D006BFB54 /* Frameworks */,
-				6D0FDF541BB0582800F7DACC /* Embed Frameworks */,
+				C68DCD521C16333C00C7A111 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -505,6 +508,7 @@
 				5087E78417EB970100C73F5D /* Icon-57.png in Resources */,
 				5087E77E17EB970100C73F5D /* Default.png in Resources */,
 				521A8E6419F0C34300D177D7 /* Default-667h@2x.png in Resources */,
+				6D5AB69A1C23446B007278E8 /* PlaymiumStrings.dat in Resources */,
 				50EF629717ECD46A001EB2F8 /* Icon-58.png in Resources */,
 				686C4C598BE2D33D72717162 /* res in Resources */,
 			);
@@ -560,7 +564,7 @@
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(PROJECT_DIR)/../libs/**",
-					"$(PROJECT_DIR)/../Frameworks",
+					"$(PROJECT_DIR)/../libs/Frameworks",
 				);
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
@@ -603,7 +607,7 @@
 					"-ObjC",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.playmium.cocos2dx;
-				PROVISIONING_PROFILE = "ac8b4219-861c-4d87-a646-6c8537186096";
+				PROVISIONING_PROFILE = "1184d896-6b6c-40c6-9703-06609c6ec2aa";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				USER_HEADER_SEARCH_PATHS = "$(_COCOS_HEADER_IOS_BEGIN) $(_COCOS_HEADER_IOS_END) $(SRCROOT)/../libs/**";
@@ -621,7 +625,7 @@
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(PROJECT_DIR)/../libs/**",
-					"$(PROJECT_DIR)/../Frameworks",
+					"$(PROJECT_DIR)/../libs/Frameworks",
 				);
 				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -662,7 +666,7 @@
 					"-ObjC",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.playmium.cocos2dx;
-				PROVISIONING_PROFILE = "ac8b4219-861c-4d87-a646-6c8537186096";
+				PROVISIONING_PROFILE = "1184d896-6b6c-40c6-9703-06609c6ec2aa";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				USER_HEADER_SEARCH_PATHS = "$(_COCOS_HEADER_IOS_BEGIN) $(_COCOS_HEADER_IOS_END) $(SRCROOT)/../libs/**";

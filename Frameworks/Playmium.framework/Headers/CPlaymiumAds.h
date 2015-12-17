@@ -30,7 +30,7 @@ struct CPlaymiumAdDef
   CPlaymiumAdDef( const Playmium::AdType pAdType, const char *adID);
   ~CPlaymiumAdDef();
   
-  const char *getZoneIDFromType(Playmium::AdType pAdType);
+  static const char *getZoneIDFromType(Playmium::AdType pAdType);
   const Playmium::AdType getAdTypeFromID(const char *adID);
   
   const char *getAdID() const { return m_AdID; }

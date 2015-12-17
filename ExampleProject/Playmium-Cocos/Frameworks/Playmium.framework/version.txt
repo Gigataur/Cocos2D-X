@@ -2,13 +2,18 @@
 
 ********************************************
 
-              Playmium v1.3.6
+              Playmium v1.3.7
 
 ********************************************
 
 
 
 Build Notes:
+
+1.3.7
+- Added ability to launch feedback form
+- Added rate me functionality
+
 
 1.3.6
 - Fixed case where you could get double local notification posts.

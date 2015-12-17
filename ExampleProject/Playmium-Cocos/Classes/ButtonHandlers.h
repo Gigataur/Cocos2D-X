@@ -42,6 +42,9 @@ public:
   void onResume();
   void update(float deltaSeconds);
   
+  const char *getLoadAdId() { return m_loadVideoId.c_str(); }
+  void enablePlayButton();
+  
 private:
   
   void enableButtons(bool bEnabled);
@@ -52,7 +55,8 @@ private:
   //buttons
   cocos2d::ui::Button *m_StartSession;
   cocos2d::ui::Button *m_Interstitial;
-  cocos2d::ui::Button *m_Video;
+  cocos2d::ui::Button *m_VideoPlay;
+  cocos2d::ui::Button *m_VideoLoad;
   cocos2d::ui::Button *m_RewardVideo;
   cocos2d::ui::Button *m_CrossPromotion;
   cocos2d::ui::Button *m_VirtualGoods;
@@ -60,7 +64,9 @@ private:
   cocos2d::ui::Button *m_OptionsButton;
   cocos2d::ui::Button *m_CloseOptionsButton;
   cocos2d::ui::Button *m_EULAButton;
+  cocos2d::ui::Button *m_FeedbackButton;
   cocos2d::ui::Button *m_PolicyButton;
+  cocos2d::ui::Button *m_RateButton;
   cocos2d::ui::TextField *m_ErrorCode;
   cocos2d::ui::TextField *m_RewardText;
   cocos2d::ui::Widget* m_OptionsMenu;
@@ -70,7 +76,9 @@ private:
   GameCallbackHandler m_handler;
   InternalState m_state;
   float m_stateAge;  
-  int m_reward;  
+  int m_reward;
+  
+  std::string m_loadVideoId;
 };
 
 #endif /* defined(__Playmium_Cocos__ButtonHandlers__) */

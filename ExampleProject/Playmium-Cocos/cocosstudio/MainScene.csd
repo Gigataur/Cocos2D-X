@@ -1,12 +1,12 @@
-<GameProjectFile>
-  <PropertyGroup Type="Scene" Name="MainScene" ID="a2ee0952-26b5-49ae-8bf9-4f1d6279b798" Version="2.3.2.3" />
+<GameFile>
+  <PropertyGroup Name="MainScene" Type="Scene" ID="a2ee0952-26b5-49ae-8bf9-4f1d6279b798" Version="2.3.3.0" />
   <Content ctype="GameProjectContent">
     <Content>
       <Animation Duration="0" Speed="1.0000" />
       <ObjectData Name="Scene" ctype="GameNodeObjectData">
-        <Size X="750.0000" Y="1334.0000" />
+        <Size X="640.0000" Y="1136.0000" />
         <Children>
-          <AbstractNodeData Name="RootNode" ActionTag="-583790851" Tag="26" IconVisible="True" HorizontalEdge="BothEdge" VerticalEdge="BothEdge" LeftMargin="375.0000" RightMargin="375.0000" TopMargin="667.0000" BottomMargin="667.0000" ctype="SingleNodeObjectData">
+          <AbstractNodeData Name="RootNode" ActionTag="-583790851" Tag="26" IconVisible="True" HorizontalEdge="BothEdge" VerticalEdge="BothEdge" LeftMargin="320.0000" RightMargin="320.0000" TopMargin="568.0000" BottomMargin="568.0000" ctype="SingleNodeObjectData">
             <Size X="0.0000" Y="0.0000" />
             <Children>
               <AbstractNodeData Name="bg_white" ActionTag="1711347407" Tag="10" IconVisible="False" LeftMargin="-522.5368" RightMargin="490.5368" TopMargin="738.6964" BottomMargin="-770.6964" ctype="SpriteObjectData">
@@ -30,7 +30,7 @@
                     <Scale ScaleX="1.0000" ScaleY="1.0000" />
                     <CColor A="255" R="255" G="255" B="255" />
                     <PrePosition X="1.4940" />
-                    <PreSize X="0.0000" Y="0.0000" />
+                    <PreSize X="1.0000" Y="1.0000" />
                     <FileData Type="Normal" Path="Resrouces/PApp_BGGradient.png" Plist="" />
                     <BlendFunc Src="770" Dst="771" />
                   </AbstractNodeData>
@@ -44,7 +44,7 @@
                 <FileData Type="Normal" Path="Resrouces/PApp_BGGradient.png" Plist="" />
                 <BlendFunc Src="770" Dst="771" />
               </AbstractNodeData>
-              <AbstractNodeData Name="bg_logo" ActionTag="-676183080" Tag="14" IconVisible="False" LeftMargin="-256.5822" RightMargin="-255.4178" TopMargin="-680.1473" BottomMargin="168.1473" ctype="SpriteObjectData">
+              <AbstractNodeData Name="bg_logo" ActionTag="-676183080" Tag="14" IconVisible="False" LeftMargin="-256.5710" RightMargin="-255.4290" TopMargin="-680.1681" BottomMargin="168.1681" ctype="SpriteObjectData">
                 <Size X="512.0000" Y="512.0000" />
                 <AnchorPoint ScaleX="0.4824" ScaleY="0.5298" />
                 <Position X="-9.5822" Y="439.4257" />
@@ -62,7 +62,7 @@
                 <Scale ScaleX="1.0000" ScaleY="1.0000" />
                 <CColor A="255" R="255" G="255" B="255" />
                 <PrePosition />
-                <PreSize X="0.8875" Y="0.1056" />
+                <PreSize X="0.0000" Y="0.0000" />
                 <TextColor A="255" R="255" G="255" B="255" />
                 <DisabledFileData Type="Normal" Path="Resrouces/PApp_ButtonLarge_Down.png" Plist="" />
                 <PressedFileData Type="Normal" Path="Resrouces/PApp_ButtonLarge_Down.png" Plist="" />
@@ -80,7 +80,7 @@
                     <Scale ScaleX="1.2000" ScaleY="1.2000" />
                     <CColor A="255" R="255" G="255" B="255" />
                     <PrePosition X="0.4982" Y="0.5641" />
-                    <PreSize X="0.0000" Y="0.0000" />
+                    <PreSize X="0.4270" Y="0.4821" />
                     <FileData Type="Normal" Path="Resrouces/PApp_Icon_Interstitial.png" Plist="" />
                     <BlendFunc Src="1" Dst="771" />
                   </AbstractNodeData>
@@ -91,7 +91,7 @@
                     <Scale ScaleX="1.0000" ScaleY="1.0000" />
                     <CColor A="255" R="255" G="255" B="255" />
                     <PrePosition X="0.4982" Y="0.1538" />
-                    <PreSize X="0.0000" Y="0.0000" />
+                    <PreSize X="0.4235" Y="0.1641" />
                     <OutlineColor A="255" R="255" G="0" B="0" />
                     <ShadowColor A="255" R="110" G="110" B="110" />
                   </AbstractNodeData>
@@ -119,18 +119,18 @@
                     <Scale ScaleX="1.2000" ScaleY="1.2000" />
                     <CColor A="255" R="255" G="255" B="255" />
                     <PrePosition X="0.4982" Y="0.5641" />
-                    <PreSize X="0.0000" Y="0.0000" />
+                    <PreSize X="0.4270" Y="0.4821" />
                     <FileData Type="Normal" Path="Resrouces/PApp_Icon_Video.png" Plist="" />
                     <BlendFunc Src="1" Dst="771" />
                   </AbstractNodeData>
-                  <AbstractNodeData Name="Text_1" ActionTag="-467702212" Tag="20" IconVisible="False" LeftMargin="104.5000" RightMargin="105.5000" TopMargin="149.0000" BottomMargin="14.0000" FontSize="28" LabelText="Video" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
-                    <Size X="71.0000" Y="32.0000" />
+                  <AbstractNodeData Name="Text_1" ActionTag="-467702212" Tag="20" IconVisible="False" LeftMargin="73.5000" RightMargin="74.5000" TopMargin="149.0000" BottomMargin="14.0000" FontSize="28" LabelText="Play Video" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
+                    <Size X="133.0000" Y="32.0000" />
                     <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
                     <Position X="140.0000" Y="30.0000" />
                     <Scale ScaleX="1.0000" ScaleY="1.0000" />
                     <CColor A="255" R="255" G="255" B="255" />
                     <PrePosition X="0.4982" Y="0.1538" />
-                    <PreSize X="0.0000" Y="0.0000" />
+                    <PreSize X="0.4733" Y="0.1641" />
                     <OutlineColor A="255" R="255" G="0" B="0" />
                     <ShadowColor A="255" R="110" G="110" B="110" />
                   </AbstractNodeData>
@@ -148,17 +148,56 @@
                 <OutlineColor A="255" R="255" G="0" B="0" />
                 <ShadowColor A="255" R="110" G="110" B="110" />
               </AbstractNodeData>
+              <AbstractNodeData Name="Button_Video_Load" ActionTag="-100666397" Tag="48" IconVisible="False" LeftMargin="-294.2600" RightMargin="13.2600" TopMargin="-188.0600" BottomMargin="-6.9400" TouchEnable="True" FontSize="28" Scale9Enable="True" LeftEage="15" RightEage="15" TopEage="11" BottomEage="11" Scale9OriginX="15" Scale9OriginY="11" Scale9Width="192" Scale9Height="144" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
+                <Size X="281.0000" Y="195.0000" />
+                <Children>
+                  <AbstractNodeData Name="PApp_Icon_Video_1" ActionTag="1064440291" Tag="49" IconVisible="False" LeftMargin="80.0000" RightMargin="81.0000" TopMargin="38.0000" BottomMargin="63.0000" ctype="SpriteObjectData">
+                    <Size X="120.0000" Y="94.0000" />
+                    <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
+                    <Position X="140.0000" Y="110.0000" />
+                    <Scale ScaleX="1.2000" ScaleY="1.2000" />
+                    <CColor A="255" R="255" G="255" B="255" />
+                    <PrePosition X="0.4982" Y="0.5641" />
+                    <PreSize X="0.4270" Y="0.4821" />
+                    <FileData Type="Normal" Path="Resrouces/PApp_Icon_Video.png" Plist="" />
+                    <BlendFunc Src="1" Dst="771" />
+                  </AbstractNodeData>
+                  <AbstractNodeData Name="Text_1" ActionTag="-1693294801" Tag="50" IconVisible="False" LeftMargin="69.5000" RightMargin="70.5000" TopMargin="149.0000" BottomMargin="14.0000" FontSize="28" LabelText="Load Video" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
+                    <Size X="141.0000" Y="32.0000" />
+                    <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
+                    <Position X="140.0000" Y="30.0000" />
+                    <Scale ScaleX="1.0000" ScaleY="1.0000" />
+                    <CColor A="255" R="255" G="255" B="255" />
+                    <PrePosition X="0.4982" Y="0.1538" />
+                    <PreSize X="0.5018" Y="0.1641" />
+                    <OutlineColor A="255" R="255" G="0" B="0" />
+                    <ShadowColor A="255" R="110" G="110" B="110" />
+                  </AbstractNodeData>
+                </Children>
+                <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
+                <Position X="-153.7600" Y="90.5600" />
+                <Scale ScaleX="1.0000" ScaleY="1.0000" />
+                <CColor A="255" R="255" G="255" B="255" />
+                <PrePosition />
+                <PreSize X="0.0000" Y="0.0000" />
+                <TextColor A="255" R="255" G="255" B="255" />
+                <DisabledFileData Type="Normal" Path="Resrouces/PAppAlt_ButtonSmall_Up.png" Plist="" />
+                <PressedFileData Type="Normal" Path="Resrouces/PAppAlt_ButtonSmall_Down.png" Plist="" />
+                <NormalFileData Type="Normal" Path="Resrouces/PAppAlt_ButtonSmall_Up.png" Plist="" />
+                <OutlineColor A="255" R="255" G="0" B="0" />
+                <ShadowColor A="255" R="110" G="110" B="110" />
+              </AbstractNodeData>
               <AbstractNodeData Name="Button_VideoReward" ActionTag="-735674923" Tag="18" IconVisible="False" LeftMargin="-10.2736" RightMargin="-270.7264" TopMargin="-187.0538" BottomMargin="-7.9462" TouchEnable="True" FontSize="28" Scale9Enable="True" LeftEage="15" RightEage="15" TopEage="11" BottomEage="11" Scale9OriginX="15" Scale9OriginY="11" Scale9Width="192" Scale9Height="144" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
                 <Size X="281.0000" Y="195.0000" />
                 <Children>
-                  <AbstractNodeData Name="PApp_Icon_VideoReward_2" ActionTag="1895559386" Tag="15" IconVisible="False" LeftMargin="109.4997" RightMargin="51.5003" TopMargin="15.0005" BottomMargin="85.9995" ctype="SpriteObjectData">
+                  <AbstractNodeData Name="PApp_Icon_VideoReward_2" ActionTag="1895559386" Tag="15" IconVisible="False" LeftMargin="109.4997" RightMargin="51.5003" TopMargin="14.9989" BottomMargin="86.0011" ctype="SpriteObjectData">
                     <Size X="120.0000" Y="94.0000" />
                     <AnchorPoint ScaleX="1.8625" ScaleY="1.6221" />
                     <Position X="332.9997" Y="238.4785" />
                     <Scale ScaleX="1.2000" ScaleY="1.2000" />
                     <CColor A="255" R="255" G="255" B="255" />
                     <PrePosition X="1.1851" Y="1.2230" />
-                    <PreSize X="0.0000" Y="0.0000" />
+                    <PreSize X="0.4270" Y="0.4821" />
                     <FileData Type="Normal" Path="Resrouces/PApp_Icon_VideoReward.png" Plist="" />
                     <BlendFunc Src="1" Dst="771" />
                   </AbstractNodeData>
@@ -169,7 +208,7 @@
                     <Scale ScaleX="1.1000" ScaleY="1.1000" />
                     <CColor A="255" R="255" G="255" B="255" />
                     <PrePosition X="0.9092" Y="0.8773" />
-                    <PreSize X="0.0000" Y="0.0000" />
+                    <PreSize X="0.1708" Y="0.2462" />
                     <FileData Type="Normal" Path="Resrouces/PApp_NotificationCircle.png" Plist="" />
                     <BlendFunc Src="1" Dst="771" />
                   </AbstractNodeData>
@@ -180,7 +219,7 @@
                     <Scale ScaleX="1.0000" ScaleY="1.0000" />
                     <CColor A="255" R="255" G="255" B="255" />
                     <PrePosition X="0.4911" Y="0.1538" />
-                    <PreSize X="0.0000" Y="0.0000" />
+                    <PreSize X="0.6228" Y="0.1641" />
                     <OutlineColor A="255" R="255" G="0" B="0" />
                     <ShadowColor A="255" R="110" G="110" B="110" />
                   </AbstractNodeData>
@@ -208,7 +247,7 @@
                     <Scale ScaleX="1.2000" ScaleY="1.2000" />
                     <CColor A="255" R="255" G="255" B="255" />
                     <PrePosition X="0.4982" Y="0.5641" />
-                    <PreSize X="0.0000" Y="0.0000" />
+                    <PreSize X="0.4270" Y="0.4821" />
                     <FileData Type="Normal" Path="Resrouces/PApp_Icon_CrossPromotion.png" Plist="" />
                     <BlendFunc Src="1" Dst="771" />
                   </AbstractNodeData>
@@ -219,7 +258,7 @@
                     <Scale ScaleX="1.0000" ScaleY="1.0000" />
                     <CColor A="255" R="255" G="255" B="255" />
                     <PrePosition X="0.4982" Y="0.1538" />
-                    <PreSize X="0.0000" Y="0.0000" />
+                    <PreSize X="0.7402" Y="0.1641" />
                     <OutlineColor A="255" R="255" G="0" B="0" />
                     <ShadowColor A="255" R="110" G="110" B="110" />
                   </AbstractNodeData>
@@ -247,7 +286,7 @@
                     <Scale ScaleX="1.2000" ScaleY="1.2000" />
                     <CColor A="255" R="255" G="255" B="255" />
                     <PrePosition X="0.4982" Y="0.5641" />
-                    <PreSize X="0.0000" Y="0.0000" />
+                    <PreSize X="0.4270" Y="0.4821" />
                     <FileData Type="Normal" Path="Resrouces/PApp_Icon_VirtualGoods.png" Plist="" />
                     <BlendFunc Src="1" Dst="771" />
                   </AbstractNodeData>
@@ -258,7 +297,7 @@
                     <Scale ScaleX="1.0000" ScaleY="1.0000" />
                     <CColor A="255" R="255" G="255" B="255" />
                     <PrePosition X="0.4982" Y="0.1538" />
-                    <PreSize X="0.0000" Y="0.0000" />
+                    <PreSize X="0.6014" Y="0.1641" />
                     <OutlineColor A="255" R="255" G="0" B="0" />
                     <ShadowColor A="255" R="110" G="110" B="110" />
                   </AbstractNodeData>
@@ -286,7 +325,7 @@
                     <Scale ScaleX="1.2000" ScaleY="1.2000" />
                     <CColor A="255" R="255" G="255" B="255" />
                     <PrePosition X="0.4982" Y="0.5641" />
-                    <PreSize X="0.0000" Y="0.0000" />
+                    <PreSize X="0.4270" Y="0.4821" />
                     <FileData Type="Normal" Path="Resrouces/PApp_Icon_DirectDeal.png" Plist="" />
                     <BlendFunc Src="1" Dst="771" />
                   </AbstractNodeData>
@@ -297,7 +336,7 @@
                     <Scale ScaleX="1.0000" ScaleY="1.0000" />
                     <CColor A="255" R="255" G="255" B="255" />
                     <PrePosition X="0.4982" Y="0.1538" />
-                    <PreSize X="0.0000" Y="0.0000" />
+                    <PreSize X="0.4911" Y="0.1641" />
                     <OutlineColor A="255" R="255" G="0" B="0" />
                     <ShadowColor A="255" R="110" G="110" B="110" />
                   </AbstractNodeData>
@@ -346,7 +385,7 @@
                 <Scale ScaleX="1.0000" ScaleY="1.0000" />
                 <CColor A="255" R="255" G="255" B="255" />
                 <PrePosition />
-                <PreSize X="0.2031" Y="0.0352" />
+                <PreSize X="0.0000" Y="0.0000" />
               </AbstractNodeData>
               <AbstractNodeData Name="reward_text" ActionTag="847875398" Tag="35" IconVisible="False" LeftMargin="238.0532" RightMargin="-368.0532" TopMargin="-178.2238" BottomMargin="138.2238" FontSize="24" IsCustomSize="True" LabelText="0" PlaceHolderText="" MaxLengthText="10" ctype="TextFieldObjectData">
                 <Size X="130.0000" Y="40.0000" />
@@ -355,43 +394,65 @@
                 <Scale ScaleX="1.0000" ScaleY="1.0000" />
                 <CColor A="255" R="255" G="255" B="255" />
                 <PrePosition />
-                <PreSize X="0.2031" Y="0.0352" />
+                <PreSize X="0.0000" Y="0.0000" />
               </AbstractNodeData>
-              <AbstractNodeData Name="OptionsMenu" Visible="False" ActionTag="1605447521" Tag="39" IconVisible="False" LeftMargin="-372.2079" RightMargin="-119.7921" TopMargin="12.7123" BottomMargin="-524.7123" ctype="SpriteObjectData">
-                <Size X="492.0000" Y="512.0000" />
+              <AbstractNodeData Name="PApp_PageTurn_7" ActionTag="-1357957932" Tag="27" IconVisible="False" HorizontalEdge="RightEdge" VerticalEdge="TopEdge" LeftMargin="221.8347" RightMargin="-377.8347" TopMargin="-652.6202" BottomMargin="532.6202" ctype="SpriteObjectData">
+                <Size X="156.0000" Y="120.0000" />
+                <AnchorPoint ScaleX="1.0000" ScaleY="1.0000" />
+                <Position X="377.8347" Y="652.6202" />
+                <Scale ScaleX="1.5000" ScaleY="1.5000" />
+                <CColor A="255" R="255" G="255" B="255" />
+                <PrePosition />
+                <PreSize X="0.0000" Y="0.0000" />
+                <FileData Type="Normal" Path="Resrouces/PApp_PageTurn.png" Plist="" />
+                <BlendFunc Src="770" Dst="771" />
+              </AbstractNodeData>
+              <AbstractNodeData Name="OptionsMenu" Visible="False" ActionTag="1605447521" Tag="39" IconVisible="False" LeftMargin="-381.3654" RightMargin="335.3654" TopMargin="274.9158" BottomMargin="-320.9158" ctype="SpriteObjectData">
+                <Size X="46.0000" Y="46.0000" />
                 <Children>
-                  <AbstractNodeData Name="Button_EULA" ActionTag="-552545499" Tag="40" IconVisible="False" LeftMargin="99.5000" RightMargin="111.5000" TopMargin="56.8726" BottomMargin="260.1274" TouchEnable="True" FontSize="28" Scale9Enable="True" LeftEage="15" RightEage="15" TopEage="11" BottomEage="11" Scale9OriginX="15" Scale9OriginY="11" Scale9Width="192" Scale9Height="144" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
-                    <Size X="281.0000" Y="195.0000" />
+                  <AbstractNodeData Name="background" ActionTag="1635543522" Tag="47" IconVisible="False" LeftMargin="4.3666" RightMargin="-450.3666" TopMargin="-377.9261" BottomMargin="-88.0739" ctype="SpriteObjectData">
+                    <Size X="492.0000" Y="512.0000" />
+                    <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
+                    <Position X="250.3666" Y="167.9261" />
+                    <Scale ScaleX="1.0000" ScaleY="1.3101" />
+                    <CColor A="255" R="255" G="255" B="255" />
+                    <PrePosition X="5.4428" Y="3.6506" />
+                    <PreSize X="10.6957" Y="11.1304" />
+                    <FileData Type="Normal" Path="Resrouces/PApp_PopUpWindow.png" Plist="" />
+                    <BlendFunc Src="770" Dst="771" />
+                  </AbstractNodeData>
+                  <AbstractNodeData Name="Button_EULA" ActionTag="-552545499" Tag="40" IconVisible="False" LeftMargin="131.1065" RightMargin="-315.1065" TopMargin="-432.4253" BottomMargin="328.4253" TouchEnable="True" FontSize="28" Scale9Enable="True" LeftEage="15" RightEage="15" TopEage="11" BottomEage="11" Scale9OriginX="15" Scale9OriginY="11" Scale9Width="192" Scale9Height="144" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
+                    <Size X="230.0000" Y="150.0000" />
                     <Children>
-                      <AbstractNodeData Name="Icon" ActionTag="1169129542" Tag="41" IconVisible="False" LeftMargin="80.0000" RightMargin="81.0000" TopMargin="38.0000" BottomMargin="63.0000" ctype="SpriteObjectData">
+                      <AbstractNodeData Name="Icon" ActionTag="1169129542" Tag="41" IconVisible="False" LeftMargin="57.4790" RightMargin="52.5210" TopMargin="10.7871" BottomMargin="45.2129" ctype="SpriteObjectData">
                         <Size X="120.0000" Y="94.0000" />
                         <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-                        <Position X="140.0000" Y="110.0000" />
-                        <Scale ScaleX="1.2000" ScaleY="1.2000" />
+                        <Position X="117.4790" Y="92.2129" />
+                        <Scale ScaleX="0.8438" ScaleY="0.9402" />
                         <CColor A="255" R="255" G="255" B="255" />
-                        <PrePosition X="0.4982" Y="0.5641" />
-                        <PreSize X="0.0000" Y="0.0000" />
+                        <PrePosition X="0.5108" Y="0.6148" />
+                        <PreSize X="0.5217" Y="0.6267" />
                         <FileData Type="Normal" Path="Resrouces/PApp_Icon_EULA.png" Plist="" />
                         <BlendFunc Src="1" Dst="771" />
                       </AbstractNodeData>
-                      <AbstractNodeData Name="Text" ActionTag="1816134957" Tag="42" IconVisible="False" LeftMargin="71.0000" RightMargin="72.0000" TopMargin="149.0000" BottomMargin="14.0000" FontSize="28" LabelText="EULA" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
+                      <AbstractNodeData Name="Text" ActionTag="1816134957" Tag="42" IconVisible="False" LeftMargin="80.6011" RightMargin="76.3989" TopMargin="105.5270" BottomMargin="12.4730" FontSize="28" LabelText="EULA" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
                         <Size X="73.0000" Y="32.0000" />
                         <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-                        <Position X="140.0000" Y="30.0000" />
+                        <Position X="117.1011" Y="28.4730" />
                         <Scale ScaleX="1.0000" ScaleY="1.0000" />
                         <CColor A="255" R="255" G="255" B="255" />
-                        <PrePosition X="0.4982" Y="0.1538" />
-                        <PreSize X="0.0000" Y="0.0000" />
+                        <PrePosition X="0.5091" Y="0.1898" />
+                        <PreSize X="0.3174" Y="0.2133" />
                         <OutlineColor A="255" R="255" G="0" B="0" />
                         <ShadowColor A="255" R="110" G="110" B="110" />
                       </AbstractNodeData>
                     </Children>
                     <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-                    <Position X="240.0000" Y="357.6274" />
+                    <Position X="246.1065" Y="403.4253" />
                     <Scale ScaleX="1.0000" ScaleY="1.0000" />
                     <CColor A="255" R="255" G="255" B="255" />
-                    <PrePosition X="0.4878" Y="0.6985" />
-                    <PreSize X="0.5711" Y="0.3809" />
+                    <PrePosition X="5.3501" Y="8.7701" />
+                    <PreSize X="5.0000" Y="3.2609" />
                     <TextColor A="255" R="255" G="255" B="255" />
                     <DisabledFileData Type="Normal" Path="Resrouces/PApp_ButtonSmall_Down.png" Plist="" />
                     <PressedFileData Type="Normal" Path="Resrouces/PApp_ButtonSmall_Down.png" Plist="" />
@@ -399,53 +460,14 @@
                     <OutlineColor A="255" R="255" G="0" B="0" />
                     <ShadowColor A="255" R="110" G="110" B="110" />
                   </AbstractNodeData>
-                  <AbstractNodeData Name="Button_Policy" ActionTag="-1664925666" Tag="43" IconVisible="False" LeftMargin="99.5000" RightMargin="111.5000" TopMargin="249.7915" BottomMargin="67.2085" TouchEnable="True" FontSize="28" Scale9Enable="True" LeftEage="15" RightEage="15" TopEage="11" BottomEage="11" Scale9OriginX="15" Scale9OriginY="11" Scale9Width="192" Scale9Height="144" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
-                    <Size X="281.0000" Y="195.0000" />
-                    <Children>
-                      <AbstractNodeData Name="Icon" ActionTag="-177072123" Tag="44" IconVisible="False" LeftMargin="80.0000" RightMargin="81.0000" TopMargin="38.0000" BottomMargin="63.0000" ctype="SpriteObjectData">
-                        <Size X="120.0000" Y="94.0000" />
-                        <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-                        <Position X="140.0000" Y="110.0000" />
-                        <Scale ScaleX="1.2000" ScaleY="1.2000" />
-                        <CColor A="255" R="255" G="255" B="255" />
-                        <PrePosition X="0.4982" Y="0.5641" />
-                        <PreSize X="0.0000" Y="0.0000" />
-                        <FileData Type="Normal" Path="Resrouces/PApp_Icon_PrivacyPolicy.png" Plist="" />
-                        <BlendFunc Src="1" Dst="771" />
-                      </AbstractNodeData>
-                      <AbstractNodeData Name="Text" ActionTag="-117367680" Tag="45" IconVisible="False" LeftMargin="71.0000" RightMargin="72.0000" TopMargin="149.0000" BottomMargin="14.0000" FontSize="28" LabelText="Privacy Policy" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
-                        <Size X="174.0000" Y="32.0000" />
-                        <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-                        <Position X="140.0000" Y="30.0000" />
-                        <Scale ScaleX="1.0000" ScaleY="1.0000" />
-                        <CColor A="255" R="255" G="255" B="255" />
-                        <PrePosition X="0.4982" Y="0.1538" />
-                        <PreSize X="0.0000" Y="0.0000" />
-                        <OutlineColor A="255" R="255" G="0" B="0" />
-                        <ShadowColor A="255" R="110" G="110" B="110" />
-                      </AbstractNodeData>
-                    </Children>
-                    <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-                    <Position X="240.0000" Y="164.7085" />
-                    <Scale ScaleX="1.0000" ScaleY="1.0000" />
-                    <CColor A="255" R="255" G="255" B="255" />
-                    <PrePosition X="0.4878" Y="0.3217" />
-                    <PreSize X="0.5711" Y="0.3809" />
-                    <TextColor A="255" R="255" G="255" B="255" />
-                    <DisabledFileData Type="Normal" Path="Resrouces/PApp_ButtonSmall_Down.png" Plist="" />
-                    <PressedFileData Type="Normal" Path="Resrouces/PApp_ButtonSmall_Down.png" Plist="" />
-                    <NormalFileData Type="Normal" Path="Resrouces/PApp_ButtonSmall_Up.png" Plist="" />
-                    <OutlineColor A="255" R="255" G="0" B="0" />
-                    <ShadowColor A="255" R="110" G="110" B="110" />
-                  </AbstractNodeData>
-                  <AbstractNodeData Name="Button_Close" ActionTag="-1342475135" Tag="46" IconVisible="False" LeftMargin="439.5262" RightMargin="10.4738" TopMargin="-0.6063" BottomMargin="470.6063" TouchEnable="True" FontSize="28" Scale9Enable="True" LeftEage="13" RightEage="13" TopEage="11" BottomEage="11" Scale9OriginX="13" Scale9OriginY="11" Scale9Width="16" Scale9Height="20" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
+                  <AbstractNodeData Name="Button_Close" ActionTag="-1342475135" Tag="46" IconVisible="False" LeftMargin="445.6318" RightMargin="-441.6318" TopMargin="-465.0793" BottomMargin="469.0793" TouchEnable="True" FontSize="28" Scale9Enable="True" LeftEage="13" RightEage="13" TopEage="11" BottomEage="11" Scale9OriginX="13" Scale9OriginY="11" Scale9Width="16" Scale9Height="20" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
                     <Size X="42.0000" Y="42.0000" />
                     <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-                    <Position X="460.5262" Y="491.6063" />
+                    <Position X="466.6318" Y="490.0793" />
                     <Scale ScaleX="1.2500" ScaleY="1.2500" />
                     <CColor A="255" R="255" G="255" B="255" />
-                    <PrePosition X="0.9360" Y="0.9602" />
-                    <PreSize X="0.0854" Y="0.0820" />
+                    <PrePosition X="10.1442" Y="10.6539" />
+                    <PreSize X="0.9130" Y="0.9130" />
                     <TextColor A="255" R="255" G="255" B="255" />
                     <DisabledFileData Type="Normal" Path="Resrouces/PApp_XButton_Down.png" Plist="" />
                     <PressedFileData Type="Normal" Path="Resrouces/PApp_XButton_Down.png" Plist="" />
@@ -453,43 +475,149 @@
                     <OutlineColor A="255" R="255" G="0" B="0" />
                     <ShadowColor A="255" R="110" G="110" B="110" />
                   </AbstractNodeData>
+                  <AbstractNodeData Name="Button_Policy" ActionTag="-541777241" Tag="51" IconVisible="False" LeftMargin="128.6134" RightMargin="-312.6134" TopMargin="-282.2584" BottomMargin="178.2584" TouchEnable="True" FontSize="28" Scale9Enable="True" LeftEage="15" RightEage="15" TopEage="11" BottomEage="11" Scale9OriginX="15" Scale9OriginY="11" Scale9Width="192" Scale9Height="144" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
+                    <Size X="230.0000" Y="150.0000" />
+                    <Children>
+                      <AbstractNodeData Name="Icon" ActionTag="288398425" Tag="52" IconVisible="False" LeftMargin="57.4790" RightMargin="52.5210" TopMargin="10.7871" BottomMargin="45.2129" ctype="SpriteObjectData">
+                        <Size X="120.0000" Y="94.0000" />
+                        <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
+                        <Position X="117.4790" Y="92.2129" />
+                        <Scale ScaleX="0.8438" ScaleY="0.9402" />
+                        <CColor A="255" R="255" G="255" B="255" />
+                        <PrePosition X="0.5108" Y="0.6148" />
+                        <PreSize X="0.5217" Y="0.6267" />
+                        <FileData Type="Normal" Path="Resrouces/PApp_Icon_PrivacyPolicy.png" Plist="" />
+                        <BlendFunc Src="1" Dst="771" />
+                      </AbstractNodeData>
+                      <AbstractNodeData Name="Text" ActionTag="-135748956" Tag="53" IconVisible="False" LeftMargin="30.1011" RightMargin="25.8989" TopMargin="105.5270" BottomMargin="12.4730" FontSize="28" LabelText="Privacy Policy" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
+                        <Size X="174.0000" Y="32.0000" />
+                        <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
+                        <Position X="117.1011" Y="28.4730" />
+                        <Scale ScaleX="1.0000" ScaleY="1.0000" />
+                        <CColor A="255" R="255" G="255" B="255" />
+                        <PrePosition X="0.5091" Y="0.1898" />
+                        <PreSize X="0.7565" Y="0.2133" />
+                        <OutlineColor A="255" R="255" G="0" B="0" />
+                        <ShadowColor A="255" R="110" G="110" B="110" />
+                      </AbstractNodeData>
+                    </Children>
+                    <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
+                    <Position X="243.6134" Y="253.2584" />
+                    <Scale ScaleX="1.0000" ScaleY="1.0000" />
+                    <CColor A="255" R="255" G="255" B="255" />
+                    <PrePosition X="5.2959" Y="5.5056" />
+                    <PreSize X="5.0000" Y="3.2609" />
+                    <TextColor A="255" R="255" G="255" B="255" />
+                    <DisabledFileData Type="Normal" Path="Resrouces/PApp_ButtonSmall_Down.png" Plist="" />
+                    <PressedFileData Type="Normal" Path="Resrouces/PApp_ButtonSmall_Down.png" Plist="" />
+                    <NormalFileData Type="Normal" Path="Resrouces/PApp_ButtonSmall_Up.png" Plist="" />
+                    <OutlineColor A="255" R="255" G="0" B="0" />
+                    <ShadowColor A="255" R="110" G="110" B="110" />
+                  </AbstractNodeData>
+                  <AbstractNodeData Name="Button_Feedback" ActionTag="-2126047176" Tag="54" IconVisible="False" LeftMargin="128.6137" RightMargin="-312.6137" TopMargin="-129.5982" BottomMargin="25.5982" TouchEnable="True" FontSize="28" Scale9Enable="True" LeftEage="15" RightEage="15" TopEage="11" BottomEage="11" Scale9OriginX="15" Scale9OriginY="11" Scale9Width="192" Scale9Height="144" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
+                    <Size X="230.0000" Y="150.0000" />
+                    <Children>
+                      <AbstractNodeData Name="Icon" ActionTag="-2058791520" Tag="55" IconVisible="False" LeftMargin="57.4790" RightMargin="52.5210" TopMargin="10.7871" BottomMargin="45.2129" ctype="SpriteObjectData">
+                        <Size X="120.0000" Y="94.0000" />
+                        <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
+                        <Position X="117.4790" Y="92.2129" />
+                        <Scale ScaleX="0.8438" ScaleY="0.9402" />
+                        <CColor A="255" R="255" G="255" B="255" />
+                        <PrePosition X="0.5108" Y="0.6148" />
+                        <PreSize X="0.5217" Y="0.6267" />
+                        <FileData Type="Normal" Path="Resrouces/PApp_Icon_Interstitial.png" Plist="" />
+                        <BlendFunc Src="1" Dst="771" />
+                      </AbstractNodeData>
+                      <AbstractNodeData Name="Text" ActionTag="-1080291024" Tag="56" IconVisible="False" LeftMargin="19.1011" RightMargin="14.8989" TopMargin="105.5270" BottomMargin="12.4730" FontSize="28" LabelText="Send Feedback" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
+                        <Size X="196.0000" Y="32.0000" />
+                        <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
+                        <Position X="117.1011" Y="28.4730" />
+                        <Scale ScaleX="1.0000" ScaleY="1.0000" />
+                        <CColor A="255" R="255" G="255" B="255" />
+                        <PrePosition X="0.5091" Y="0.1898" />
+                        <PreSize X="0.8522" Y="0.2133" />
+                        <OutlineColor A="255" R="255" G="0" B="0" />
+                        <ShadowColor A="255" R="110" G="110" B="110" />
+                      </AbstractNodeData>
+                    </Children>
+                    <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
+                    <Position X="243.6137" Y="100.5982" />
+                    <Scale ScaleX="1.0000" ScaleY="1.0000" />
+                    <CColor A="255" R="255" G="255" B="255" />
+                    <PrePosition X="5.2960" Y="2.1869" />
+                    <PreSize X="5.0000" Y="3.2609" />
+                    <TextColor A="255" R="255" G="255" B="255" />
+                    <DisabledFileData Type="Normal" Path="Resrouces/PApp_ButtonSmall_Down.png" Plist="" />
+                    <PressedFileData Type="Normal" Path="Resrouces/PApp_ButtonSmall_Down.png" Plist="" />
+                    <NormalFileData Type="Normal" Path="Resrouces/PApp_ButtonSmall_Up.png" Plist="" />
+                    <OutlineColor A="255" R="255" G="0" B="0" />
+                    <ShadowColor A="255" R="110" G="110" B="110" />
+                  </AbstractNodeData>
+                  <AbstractNodeData Name="Button_Rateapp" ActionTag="584776954" Tag="57" IconVisible="False" LeftMargin="128.6137" RightMargin="-312.6137" TopMargin="23.0622" BottomMargin="-127.0622" TouchEnable="True" FontSize="28" Scale9Enable="True" LeftEage="15" RightEage="15" TopEage="11" BottomEage="11" Scale9OriginX="15" Scale9OriginY="11" Scale9Width="192" Scale9Height="144" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
+                    <Size X="230.0000" Y="150.0000" />
+                    <Children>
+                      <AbstractNodeData Name="Icon" ActionTag="-134633309" Tag="58" IconVisible="False" LeftMargin="57.4790" RightMargin="52.5210" TopMargin="10.7871" BottomMargin="45.2129" ctype="SpriteObjectData">
+                        <Size X="120.0000" Y="94.0000" />
+                        <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
+                        <Position X="117.4790" Y="92.2129" />
+                        <Scale ScaleX="0.8438" ScaleY="0.9402" />
+                        <CColor A="255" R="255" G="255" B="255" />
+                        <PrePosition X="0.5108" Y="0.6148" />
+                        <PreSize X="0.5217" Y="0.6267" />
+                        <FileData Type="Normal" Path="Resrouces/PApp_Icon_DirectDeal.png" Plist="" />
+                        <BlendFunc Src="1" Dst="771" />
+                      </AbstractNodeData>
+                      <AbstractNodeData Name="Text" ActionTag="-318651052" Tag="59" IconVisible="False" LeftMargin="59.6011" RightMargin="55.3989" TopMargin="105.5270" BottomMargin="12.4730" FontSize="28" LabelText="Rate App" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
+                        <Size X="115.0000" Y="32.0000" />
+                        <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
+                        <Position X="117.1011" Y="28.4730" />
+                        <Scale ScaleX="1.0000" ScaleY="1.0000" />
+                        <CColor A="255" R="255" G="255" B="255" />
+                        <PrePosition X="0.5091" Y="0.1898" />
+                        <PreSize X="0.5000" Y="0.2133" />
+                        <OutlineColor A="255" R="255" G="0" B="0" />
+                        <ShadowColor A="255" R="110" G="110" B="110" />
+                      </AbstractNodeData>
+                    </Children>
+                    <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
+                    <Position X="243.6137" Y="-52.0622" />
+                    <Scale ScaleX="1.0000" ScaleY="1.0000" />
+                    <CColor A="255" R="255" G="255" B="255" />
+                    <PrePosition X="5.2960" Y="-1.1318" />
+                    <PreSize X="5.0000" Y="3.2609" />
+                    <TextColor A="255" R="255" G="255" B="255" />
+                    <DisabledFileData Type="Normal" Path="Resrouces/PApp_ButtonSmall_Down.png" Plist="" />
+                    <PressedFileData Type="Normal" Path="Resrouces/PApp_ButtonSmall_Down.png" Plist="" />
+                    <NormalFileData Type="Normal" Path="Resrouces/PApp_ButtonSmall_Up.png" Plist="" />
+                    <OutlineColor A="255" R="255" G="0" B="0" />
+                    <ShadowColor A="255" R="110" G="110" B="110" />
+                  </AbstractNodeData>
                 </Children>
                 <AnchorPoint />
-                <Position X="-372.2079" Y="-524.7123" />
+                <Position X="-381.3654" Y="-320.9158" />
                 <Scale ScaleX="1.5000" ScaleY="1.5000" />
                 <CColor A="255" R="255" G="255" B="255" />
                 <PrePosition />
                 <PreSize X="0.0000" Y="0.0000" />
-                <FileData Type="Normal" Path="Resrouces/PApp_PopUpWindow.png" Plist="" />
+                <FileData Type="Default" Path="Default/Sprite.png" Plist="" />
                 <BlendFunc Src="770" Dst="771" />
               </AbstractNodeData>
             </Children>
             <AnchorPoint />
-            <Position X="375.0000" Y="667.0000" />
+            <Position X="320.0000" Y="568.0000" />
             <Scale ScaleX="1.0000" ScaleY="1.0000" />
             <CColor A="255" R="255" G="255" B="255" />
             <PrePosition X="0.5000" Y="0.5000" />
             <PreSize X="0.0000" Y="0.0000" />
           </AbstractNodeData>
-          <AbstractNodeData Name="PApp_PageTurn_7" ActionTag="-1357957932" Tag="27" IconVisible="False" HorizontalEdge="RightEdge" VerticalEdge="TopEdge" LeftMargin="810.0800" BottomMargin="1215.9017" ctype="SpriteObjectData">
-            <Size X="156.0000" Y="120.0000" />
-            <AnchorPoint ScaleX="1.0000" ScaleY="1.0000" />
-            <Position X="750.0000" Y="1334.0000" />
-            <Scale ScaleX="1.5000" ScaleY="1.5000" />
-            <CColor A="255" R="255" G="255" B="255" />
-            <PrePosition X="1.2881" Y="1.0014" />
-            <PreSize X="0.0000" Y="0.0000" />
-            <FileData Type="Normal" Path="Resrouces/PApp_PageTurn.png" Plist="" />
-            <BlendFunc Src="770" Dst="771" />
-          </AbstractNodeData>
-          <AbstractNodeData Name="Button_Options" ActionTag="-1871749580" Tag="36" IconVisible="False" HorizontalEdge="LeftEdge" VerticalEdge="TopEdge" LeftMargin="40.0000" RightMargin="700.8024" TopMargin="40.0000" BottomMargin="1251.0200" TouchEnable="True" FontSize="28" Scale9Enable="True" LeftEage="14" RightEage="14" TopEage="11" BottomEage="11" Scale9OriginX="14" Scale9OriginY="11" Scale9Width="16" Scale9Height="22" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
+          <AbstractNodeData Name="Button_Options" ActionTag="-1871749580" Tag="36" IconVisible="False" HorizontalEdge="LeftEdge" VerticalEdge="TopEdge" LeftMargin="40.0000" RightMargin="556.0000" TopMargin="40.0000" BottomMargin="1052.0000" TouchEnable="True" FontSize="28" Scale9Enable="True" LeftEage="14" RightEage="14" TopEage="11" BottomEage="11" Scale9OriginX="14" Scale9OriginY="11" Scale9Width="16" Scale9Height="22" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
             <Size X="44.0000" Y="44.0000" />
             <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-            <Position X="62.0000" Y="1272.0000" />
+            <Position X="62.0000" Y="1074.0000" />
             <Scale ScaleX="1.5000" ScaleY="1.5000" />
             <CColor A="255" R="255" G="255" B="255" />
-            <PrePosition X="0.0363" Y="0.9543" />
-            <PreSize X="0.0000" Y="0.0000" />
+            <PrePosition X="0.0969" Y="0.9454" />
+            <PreSize X="0.0688" Y="0.0387" />
             <TextColor A="255" R="255" G="255" B="255" />
             <DisabledFileData Type="Normal" Path="Resrouces/PApp_GearButton_Down.png" Plist="" />
             <PressedFileData Type="Normal" Path="Resrouces/PApp_GearButton_Down.png" Plist="" />
@@ -497,7 +625,7 @@
             <OutlineColor A="255" R="255" G="0" B="0" />
             <ShadowColor A="255" R="110" G="110" B="110" />
           </AbstractNodeData>
-          <AbstractNodeData Name="SplashScreen" Visible="False" ActionTag="-166767643" Tag="49" IconVisible="True" HorizontalEdge="BothEdge" VerticalEdge="BothEdge" LeftMargin="375.0000" RightMargin="375.0000" TopMargin="667.0000" BottomMargin="667.0000" ctype="SingleNodeObjectData">
+          <AbstractNodeData Name="SplashScreen" Visible="False" ActionTag="-166767643" Tag="49" IconVisible="True" HorizontalEdge="BothEdge" VerticalEdge="BothEdge" LeftMargin="320.0000" RightMargin="320.0000" TopMargin="568.0000" BottomMargin="568.0000" ctype="SingleNodeObjectData">
             <Size X="0.0000" Y="0.0000" />
             <Children>
               <AbstractNodeData Name="bg_white" ActionTag="115362636" Tag="50" IconVisible="False" LeftMargin="-781.0959" RightMargin="749.0959" TopMargin="876.2262" BottomMargin="-908.2262" ctype="SpriteObjectData">
@@ -524,7 +652,7 @@
               </AbstractNodeData>
             </Children>
             <AnchorPoint />
-            <Position X="375.0000" Y="667.0000" />
+            <Position X="320.0000" Y="568.0000" />
             <Scale ScaleX="1.0000" ScaleY="1.0000" />
             <CColor A="255" R="255" G="255" B="255" />
             <PrePosition X="0.5000" Y="0.5000" />
@@ -534,4 +662,4 @@
       </ObjectData>
     </Content>
   </Content>
-</GameProjectFile>
+</GameFile>

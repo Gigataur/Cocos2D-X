@@ -1,0 +1,6 @@
+framework module Playmium {
+  umbrella header "Playmium.h"
+
+  export *
+  module * { export * }
+}

@@ -28,6 +28,7 @@ namespace Playmium
     , PLAYMIUM_ERR_SESSION_ALREADY_STARTED        ///< Trying to start an already started session
     , PLAYMIUM_ERR_SESSION_NOT_PAUSED             ///< Trying to resume the SDK session when it isn't paused
     , PLAYMIUM_ERR_SESSION_NOT_STARTED            ///< Trying to affect an SDK operation without having started the session
+    , PLAYMIUM_ERR_LOCALIZED_STRINGS_NOT_FOUND    ///< Localized string data file could not be found in application bundle
   };
 
   
