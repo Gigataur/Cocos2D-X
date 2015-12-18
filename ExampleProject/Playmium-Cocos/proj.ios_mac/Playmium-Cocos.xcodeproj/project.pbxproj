@@ -166,7 +166,7 @@
 		99B12AF91BB33F080060E426 /* PlaymiumInterface.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = PlaymiumInterface.mm; path = ios/PlaymiumInterface.mm; sourceTree = SOURCE_ROOT; };
 		BF170DB412928DE900B8313A /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		BF1C47EA1293683800B63C5D /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
-		C68DCD4D1C16331200C7A111 /* Playmium.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Playmium.framework; path = ../libs/Frameworks/Playmium.framework; sourceTree = "<group>"; };
+		C68DCD4D1C16331200C7A111 /* Playmium.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Playmium.framework; path = ../libs/ios/Frameworks/Playmium.framework; sourceTree = "<group>"; };
 		D44C620B132DFF330009C878 /* OpenAL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenAL.framework; path = System/Library/Frameworks/OpenAL.framework; sourceTree = SDKROOT; };
 		D44C620D132DFF430009C878 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		D44C620F132DFF4E0009C878 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
@@ -559,7 +559,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Chris Fowler (FJ7YB62D83)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: GlitchSoft Corporation (JTE5ECYQD5)";
 				COMPRESS_PNG_FILES = YES;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -607,7 +607,7 @@
 					"-ObjC",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.playmium.cocos2dx;
-				PROVISIONING_PROFILE = "1184d896-6b6c-40c6-9703-06609c6ec2aa";
+				PROVISIONING_PROFILE = "34d1801a-a777-48df-a51b-8ba819be7b61";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				USER_HEADER_SEARCH_PATHS = "$(_COCOS_HEADER_IOS_BEGIN) $(_COCOS_HEADER_IOS_END) $(SRCROOT)/../libs/**";
@@ -620,7 +620,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Chris Fowler (FJ7YB62D83)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: GlitchSoft Corporation (JTE5ECYQD5)";
 				COMPRESS_PNG_FILES = YES;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -666,7 +666,7 @@
 					"-ObjC",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.playmium.cocos2dx;
-				PROVISIONING_PROFILE = "1184d896-6b6c-40c6-9703-06609c6ec2aa";
+				PROVISIONING_PROFILE = "34d1801a-a777-48df-a51b-8ba819be7b61";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				USER_HEADER_SEARCH_PATHS = "$(_COCOS_HEADER_IOS_BEGIN) $(_COCOS_HEADER_IOS_END) $(SRCROOT)/../libs/**";
