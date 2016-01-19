@@ -18,7 +18,7 @@
 		</data>
 		<key>Headers/CPlaymiumUserRating.h</key>
 		<data>
-		rGORh8aJZPy68Hiami4mn1qSY2U=
+		h7H/m80dqudVN/CwPNE+6DME6qo=
 		</data>
 		<key>Headers/Playmium.h</key>
 		<data>
@@ -46,15 +46,11 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		AGUrpFeklMDsFHI0rTpH4n/Ct94=
+		J7ghop6Cz5XuD0hqebrBVxNQk4c=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
 		77GRUjiZiDT0ygckFBRT356vJEU=
-		</data>
-		<key>embedded.mobileprovision</key>
-		<data>
-		UJNd1TQmt6LVlf/er7D898Ap3v0=
 		</data>
 		<key>json_internalarray.inl</key>
 		<data>
@@ -70,7 +66,7 @@
 		</data>
 		<key>version.txt</key>
 		<data>
-		rQgUucjXg9PWwAc6R4WEpRfVzUk=
+		KzC9ekqMOLSMbEnxZi0sJ+QtGGQ=
 		</data>
 	</dict>
 	<key>files2</key>
@@ -89,7 +85,7 @@
 		</data>
 		<key>Headers/CPlaymiumUserRating.h</key>
 		<data>
-		rGORh8aJZPy68Hiami4mn1qSY2U=
+		h7H/m80dqudVN/CwPNE+6DME6qo=
 		</data>
 		<key>Headers/Playmium.h</key>
 		<data>
@@ -119,10 +115,6 @@
 		<data>
 		77GRUjiZiDT0ygckFBRT356vJEU=
 		</data>
-		<key>embedded.mobileprovision</key>
-		<data>
-		UJNd1TQmt6LVlf/er7D898Ap3v0=
-		</data>
 		<key>json_internalarray.inl</key>
 		<data>
 		fEclS8u2eEVc+JWCMJeWjNn94N4=
@@ -137,7 +129,7 @@
 		</data>
 		<key>version.txt</key>
 		<data>
-		rQgUucjXg9PWwAc6R4WEpRfVzUk=
+		KzC9ekqMOLSMbEnxZi0sJ+QtGGQ=
 		</data>
 	</dict>
 	<key>rules</key>

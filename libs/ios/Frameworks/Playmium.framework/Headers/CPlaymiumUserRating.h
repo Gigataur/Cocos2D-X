@@ -26,6 +26,20 @@ public:
    Note that this method will return immediately whether or not the prompt is opened.
    */
   static void showUserRatingDlg();
+  
+  /**
+   Similar to the user rating above, if the ratngs should be opened it will return true and invoke the shouldShowRatings callback.
+   */
+  static bool checkForUserRating();
+  
+  // asks for feedback if they accept it will launch feedback task
+  static void askForFeedback();
+  
+  // forces the screen to launch to showing the rating screen for the app
+  static void launchRatings();
+  
+  // function called when you need to delay showing the ratings
+  static void showRatingsLater();
 };
 
 #endif /* CPlaymiumUserRating_h */
