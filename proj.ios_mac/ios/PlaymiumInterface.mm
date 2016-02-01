@@ -109,7 +109,10 @@ public:
   
   virtual void onAdHidden( const CPlaymiumAdDef& ad )
   {
-    //-- currently no callback for this
+    if(s_handler != NULL)
+    {
+      s_handler->onAdHidden(ad.getAdID());
+    }
   }
   
   virtual void onAdAvailabilityUpdated( const CPlaymiumAdDef& ad, bool available )

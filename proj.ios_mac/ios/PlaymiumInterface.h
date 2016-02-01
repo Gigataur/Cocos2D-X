@@ -20,6 +20,7 @@ public:
   virtual void onReward(const char *AdID, const int rewardID) = 0;
   virtual void onAdShown(const char *AdID) = 0;
   virtual void onAdFailed(const char *AdID) = 0;
+  virtual void onAdHidden(const char *AdID) = 0;
   virtual void onStatusUpdate(const char *AdID, const bool bAvailable) = 0;
   virtual void onPushNotificationClicked(const char *key, const char *data) = 0;
 };
